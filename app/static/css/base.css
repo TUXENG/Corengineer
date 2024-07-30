@@ -1,0 +1,207 @@
+:root {
+    --background-color: #30364f;
+    --light-primary-color: #f57c00;
+    --primary-color: #fc944b;
+    --secundary-color: #fe4445;
+    --accent-color: #ffbe58;
+    --primary-text: #e0e0e0;
+    --secondary-text: #6c757d;
+    --divider-color: #22333b;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body {
+    font-family: "Montserrat";
+    color: var(--primary-color);
+    background-color: var(--background-color);
+  }
+  
+  /*--------MAIN HEADER-----*/
+  .main-header {
+    width: 100%;
+    background-color: var(--divider-color);
+    display: flex;
+    position: relative;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    container-name: header;
+    container-type: inline-size;
+  }
+  
+  .main-header__logo-container {
+    max-height: 100%;
+    height: 50px;
+    left: 0;
+  }
+  .main-header__logo {
+    max-height: 50px;
+    height: 70%;
+    margin: 5px 20px;
+  }
+  
+  .main-header__menu-button {
+    margin: 5px 20px;
+    font-size: 35px;
+    position: absolute;
+    right: 0;
+  }
+  
+  .main-header__checkbox {
+    display: none;
+  }
+  
+  .main-header__nav {
+    background-color: var(--divider-color);
+    display: flex;
+    position: absolute;
+    opacity: 0.9;
+    height: 100vh;
+    width: 100vw;
+    right: -100vw;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .main-header__checkbox:checked ~ .main-header__nav {
+    right: 0;
+  }
+  
+  .main-header__checkbox:checked + .main-header__menu-button #menu-icon {
+    color: var(--secundary-color);
+  }
+  
+  .main-header__checkbox:checked + .main-header__menu-button #menu-icon::before {
+    content: "\f00d";
+  }
+  
+  .main-header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    margin: 40px 20px;
+    justify-content: space-evenly;
+    text-align: justify;
+  }
+  
+  .main-header__nav-item a,
+  .main-header__nav-icon {
+    color: var(--accent-color);
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px 15px;
+    padding: 0;
+  }
+  
+  .main-header__nav-item a:not(:hover) {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-left: 20px;
+    font-weight: normal;
+  }
+  
+  /*_______HEADER QUERIES___________*/
+  
+  @container header (min-width: 700px) {
+    .main-header__nav {
+      display: block;
+      position: static;
+      height: 1.2rem;
+      width: auto;
+      justify-content: space-between;
+    }
+  
+    .main-header__nav-list {
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      gap: 15px;
+      margin: 0;
+      margin-right: 40px;
+    }
+  
+    .main-header__nav-item {
+      display: flex;
+      flex-direction: row;
+      gap: 1px;
+      margin: 0 10px;
+      outline: none;
+      outline-offset: -10px;
+    }
+  
+    .main-header__nav-item:hover {
+      outline: 1px solid var(--primary-color);
+      outline-offset: 5px;
+      border-radius: 4px;
+    }
+  
+    .main-header__nav-item a:not(:hover) {
+      font-size: 15px;
+      margin: 2px;
+      padding: 0;
+      font-weight: bold;
+    }
+  
+    .main-header__nav-item a {
+      font-size: 15px;
+      margin: 2px;
+      padding: 0;
+      font-weight: bold;
+    }
+  
+    .main-header__menu-button {
+      display: none;
+    }
+  
+    .main-header__nav-icon {
+      font-size: 15px;
+      margin: auto;
+    }
+  }
+  
+  /*-----------FOOTER--------------*/
+  
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    position: static;
+    background-color: var(--divider-color);
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    container-name: footer;
+    container-type: inline-size;
+  }
+  
+  footer p {
+    padding: auto;
+    margin: auto;
+    padding-top: 10px;
+    margin-top: 5px;
+  }
+  
+  .corengineer {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  @container footer (min-width: 670px) {
+    footer {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+    }
+  }

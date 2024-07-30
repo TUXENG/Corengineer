@@ -1,0 +1,137 @@
+:root {
+  --font-size-welcome: 4.0rem;
+  --font-size-title : 6.0rem;
+  --font-size-subtitle : 2.0rem;
+  --font-size-button : 2.0rem;
+  --select-child: 3;
+}
+
+.index {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.index__background {
+  background-image: linear-gradient(var(--divider-color), #0002),
+    url("../img/backgroud/udea.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-auto-flow: dense;
+  grid-auto-columns: 1fr;
+  margin: auto;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1400px;
+}
+
+.index-grid__item {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  opacity: 1;
+}
+.index-grid__item:hover {
+  opacity: 0.8;
+}
+
+.index-grid__logo{
+  width: 70%;
+}
+
+.index-grid__item:first-child {
+  grid-area: span 3 / span 5;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.index-grid__item:first-child:hover {
+  opacity: 1;
+}
+.index-grid__logo-container {
+  display: block;
+  align-items: center;
+  text-align: center;
+  filter: drop-shadow(2px 2px 5px var(--secundary-color));
+}
+
+.index-grid__title {
+  font-family: "Montserrat";
+  font-size: var(--font-size-title);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.index-grid__subtitle {
+  font-family: "Montserrat";
+  font-size: var(--font-size-subtitle);
+  font-weight: normal;
+  color: var(--secundary-color);
+}
+
+.index-grid__welcome{
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: var(--font-size-welcome);
+    text-shadow: 4px 4px 10px var(--secundary-color);
+  margin-bottom: 30px;
+  padding-left: 15px;
+
+}
+
+.index-grid__button-see-more{
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--primary-color);
+  font-size: var(--font-size-button);
+  margin: 40px 20px;
+  padding: 10px 40px;
+}
+.index-grid__button-see-more:hover{
+  box-shadow: 2px 2px 5px var(--accent-color);
+}
+
+@media screen and (min-width: 1080px) {
+  .index-grid__item:nth-child(3) {
+    grid-area: span 2 / span 2;
+  }
+
+  .index-grid__item:nth-child(3) .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .index-grid__item:nth-child(3) .card__image-container {
+    height: 100%;
+  }
+
+  .index-grid__item:nth-child(3) .card__content {
+    margin: auto;
+    margin: auto 10px;
+  }
+
+  .index-grid__item:nth-child(3) .card__description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: -1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
