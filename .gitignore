@@ -1,0 +1,21 @@
+# Ignorar el archivo .env
+.env
+
+# Ignorar todos los archivos .log
+*.log
+
+# Ignorar el directorio de caché
+cache/
+
+# Ignorar el directorio de dependencias
+venv/
+
+# Ignorar todos los archivos en el directorio build
+build/*
+
+# Ignorar todos los archivos .pyc
+*.pyc
+
+# Ignorar todo el directorio logs excepto el archivo important.log
+logs/*
+!logs/important.log
