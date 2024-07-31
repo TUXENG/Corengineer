@@ -1,5 +1,4 @@
 :root {
-    --background-color: #30364f;
     --light-primary-color: #f57c00;
     --primary-color: #fc944b;
     --secundary-color: #fe4445;
@@ -7,201 +6,125 @@
     --primary-text: #e0e0e0;
     --secondary-text: #6c757d;
     --divider-color: #22333b;
-  }
-  
-  * {
-    padding: 0;
+    --background-color: #30364f;
+}
+
+* {
     margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-  }
-  
-  body {
-    font-family: "Montserrat";
-    color: var(--primary-color);
-    background-color: var(--background-color);
-  }
-  
-  /*--------MAIN HEADER-----*/
-  .main-header {
-    width: 100%;
-    background-color: var(--divider-color);
-    display: flex;
-    position: relative;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    container-name: header;
-    container-type: inline-size;
-  }
-  
-  .main-header__logo-container {
-    max-height: 100%;
-    height: 50px;
-    left: 0;
-  }
-  .main-header__logo {
-    max-height: 50px;
-    height: 70%;
-    margin: 5px 20px;
-  }
-  
-  .main-header__menu-button {
-    margin: 5px 20px;
-    font-size: 35px;
-    position: absolute;
-    right: 0;
-  }
-  
-  .main-header__checkbox {
-    display: none;
-  }
-  
-  .main-header__nav {
-    background-color: var(--divider-color);
-    display: flex;
-    position: absolute;
-    opacity: 0.9;
-    height: 100vh;
-    width: 100vw;
-    right: -100vw;
-    top: 0;
-    z-index: -1;
-  }
-  
-  .main-header__checkbox:checked ~ .main-header__nav {
-    right: 0;
-  }
-  
-  .main-header__checkbox:checked + .main-header__menu-button #menu-icon {
-    color: var(--secundary-color);
-  }
-  
-  .main-header__checkbox:checked + .main-header__menu-button #menu-icon::before {
-    content: "\f00d";
-  }
-  
-  .main-header__nav-list {
-    display: flex;
-    flex-direction: column;
-    height: 40vh;
-    margin: auto;
-    margin: 40px 20px;
-    justify-content: space-evenly;
-    text-align: justify;
-  }
-  
-  .main-header__nav-item a,
-  .main-header__nav-icon {
-    color: var(--accent-color);
-    font-size: 25px;
-    font-weight: bold;
-    margin: 5px 15px;
     padding: 0;
-  }
-  
-  .main-header__nav-item a:not(:hover) {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Roboto, Montserrat, sans-serif;
     font-size: 20px;
-    color: var(--primary-color);
-    margin-left: 20px;
-    font-weight: normal;
-  }
-  
-  /*_______HEADER QUERIES___________*/
-  
-  @container header (min-width: 700px) {
-    .main-header__nav {
-      display: block;
-      position: static;
-      height: 1.2rem;
-      width: auto;
-      justify-content: space-between;
-    }
-  
-    .main-header__nav-list {
-      display: flex;
-      flex-direction: row;
-      height: auto;
-      gap: 15px;
-      margin: 0;
-      margin-right: 40px;
-    }
-  
-    .main-header__nav-item {
-      display: flex;
-      flex-direction: row;
-      gap: 1px;
-      margin: 0 10px;
-      outline: none;
-      outline-offset: -10px;
-    }
-  
-    .main-header__nav-item:hover {
-      outline: 1px solid var(--primary-color);
-      outline-offset: 5px;
-      border-radius: 4px;
-    }
-  
-    .main-header__nav-item a:not(:hover) {
-      font-size: 15px;
-      margin: 2px;
-      padding: 0;
-      font-weight: bold;
-    }
-  
-    .main-header__nav-item a {
-      font-size: 15px;
-      margin: 2px;
-      padding: 0;
-      font-weight: bold;
-    }
-  
-    .main-header__menu-button {
-      display: none;
-    }
-  
-    .main-header__nav-icon {
-      font-size: 15px;
-      margin: auto;
-    }
-  }
-  
-  /*-----------FOOTER--------------*/
-  
-  footer {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    position: static;
+}
+
+body {
     background-color: var(--divider-color);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    grid-template-areas: "logo nav search menu";
+    width: 100%;
+    min-height: 80px;
+    max-height: 180px;
+    height: 16vh;
+    color: var(--primary-color);
+    background-color: var(--divider-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
     align-items: center;
-    text-align: center;
-    margin-top: 10px;
-    container-name: footer;
-    container-type: inline-size;
-  }
-  
-  footer p {
-    padding: auto;
-    margin: auto;
-    padding-top: 10px;
-    margin-top: 5px;
-  }
-  
-  .corengineer {
-    font-weight: bold;
+    z-index: 1000;
+}
+
+.header__logo-container {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+
+.header__link-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    width: auto;
+    height: 100%;
+    max-height: 80px;
+}
+
+.header__corengineer-logo {
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.header__nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 25px;
+}
+
+.header__nav-item {
+    margin: 5px 0;
+    opacity: .8;
+}
+
+.header__nav-item:hover {
+    opacity: 1;
+}
+
+.header__nav-item-ico {
+    font-size: medium;
+}
+
+.header__search {
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header__search-textfield {
+    display: none;
+    margin-left: 10px;
+    padding: 6px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px var(--light-primary-color);
+    color: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header__search-ico {
     font-size: 20px;
-  }
-  
-  @container footer (min-width: 670px) {
-    footer {
-      position: sticky;
-      bottom: 0;
-      left: 0;
-    }
-  }
+    color: var(--light-primary-color);
+    cursor: pointer;
+}
+
+.header__nav-checkbox-menu {
+    display: none;
+}
+
+.header__nav-button{
+    grid-area: manu;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}

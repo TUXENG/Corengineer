@@ -7,23 +7,24 @@ from flask import render_template
 
 @app.route('/')
 def home():
-    json_path = os.path.join(app.root_path, 'static/json', 'index_cards.json' )
+    return render_template('index.html')
 
-    with open(json_path, 'r', encoding='utf-8') as f:
-        cards =json.load(f)
-
-    return render_template('index.html', cards=cards)
-
+@app.route('/services')
+def services():
+    return render_template('services.html')
 
 @app.route('/portfolio')
 def portfolio():
     return render_template('portfolio.html')
 
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route('/team')
+def team():
+    return render_template('team.html')
 
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/about_us')
+def about():
+    return render_template('about.html')
