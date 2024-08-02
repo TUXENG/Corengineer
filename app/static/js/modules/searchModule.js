@@ -17,7 +17,7 @@ const searchModule = (function() {
         searchField.classList.remove('show');
         setTimeout(() => {
             searchField.style.display = 'none';
-        }, 300);
+        }, 100);
         searchIcon.style.opacity = '0.6';
     }
 

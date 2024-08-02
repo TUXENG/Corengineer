@@ -1,31 +1,36 @@
 const displayMenu = (function () {
 
     const buttonMenu = document.querySelector('.header__nav-checkbox-menu');
-    const navList = document.querySelector('.header__nav-list'); // Corregido selector
+    const nav = document.querySelector('.header__nav'); 
+    const navList = document.querySelector('.header__nav-list');
+    const navMenu = document.querySelector('.header__nav-menu-bars');
 
     function showMenu() {
-        navList.style.display = 'flex'; // Cambia display a block
-        navList.classList.add('show'); // Asegúrate de añadir la clase 'show' para cualquier estilo adicional
+        setTimeout(() => {
+            nav.style.display = 'flex';
+            nav.style.opacity = '1';
+            nav.style.width = '100%'
+            nav.classList.add('show');
+            navList.style.display = 'flex';
+            navList.style.opacity = '1';
+        }, 100);
     }
 
     function hideMenu() {
-        navList.classList.remove('show'); // Elimina la clase 'show'
+        nav.classList.remove('show'); 
         setTimeout(() => {
-            navList.style.display = 'none'; // Cambia display a none después de un tiempo
-        }, 300);
+            nav.style.display = 'none'; 
+            nav.style.opacity = '0';
+            nav.style.width = '0%'
+            navList.style.display = 'none';
+            navList.style.opacity = '0';
+        }, 180);
     }
 
-    function toggleDisplayMenu() {
-        if (navList.classList.contains('show')) {
-            hideMenu();
-        } else {
-            showMenu();
-        }
-    }
 
     function init() {
         buttonMenu.addEventListener('change', () => {
-            if (buttonMenu.checked) {
+            if (buttonMenu.checked || navMenu.style.display === 'none') {
                 showMenu();
             } else {
                 hideMenu();

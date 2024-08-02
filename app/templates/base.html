@@ -33,6 +33,45 @@
     </a>
 
     
+    <!--menu header-->
+    <div class="header__menu">
+        <!--header's menues-->
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a href="{{url_for('home')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-house"></i><h5 class="hader__nav-item-text">home</h5 class="hader__nav-item-text">
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="{{url_for('services')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fas fa-cogs"></i><h5 class="hader__nav-item-text">services</h5 class="hader__nav-item-text">
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="{{url_for('portfolio')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i><h5 class="hader__nav-item-text">portfolio </h5 class="hader__nav-item-text">
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="{{url_for('team')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-user-group"></i><h5 class="hader__nav-item-text">team</h5 class="hader__nav-item-text">
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="{{url_for('contact')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-address-book"></i><h5 class="hader__nav-item-text">contact</h5 class="hader__nav-item-text">
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="{{url_for('about')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-circle-info"></i><h5 class="hader__nav-item-text">about </h5 class="hader__nav-item-text">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <!--search button at header-->
     <div class="header__search">
     
@@ -41,51 +80,12 @@
             <i class="header__search-ico fa-sharp fa-solid fa-magnifying-glass"></i>
         </label>
     </div>
-    
-    <!--menu header-->
-    <div class="header__menu">
-        <!-- header's button bars-->
-        <div class="header__nav-menu">
-            <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars">
-            <label for="menu-bars" class="header__nav-menu-button" role="button" alt="menu">
-                <i class="header__nav-button-ico fa-solid fa-bars"></i>
-            </label>
-        </div>
-        <!--header's menues-->
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item">
-                    <a href="{{url_for('home')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-house"></i><h5 class="hader__nav-item-text">home</h5 class="hader__nav-item-text">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="{{url_for('services')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fas fa-cogs"></i><h5 class="hader__nav-item-text">services</h5 class="hader__nav-item-text">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="{{url_for('portfolio')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i><h5 class="hader__nav-item-text">portfolio </h5 class="hader__nav-item-text">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="{{url_for('team')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-user-group"></i><h5 class="hader__nav-item-text">team</h5 class="hader__nav-item-text">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="{{url_for('contact')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-address-book"></i><h5 class="hader__nav-item-text">contact</h5 class="hader__nav-item-text">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="{{url_for('about')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-circle-info"></i><h5 class="hader__nav-item-text">about </h5 class="hader__nav-item-text">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <!-- header's button bars-->
+    <div class="header__nav-menu-bars">
+        <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars">
+        <label for="menu-bars" class="header__nav-menu-button" role="button" alt="menu">
+            <i class="header__nav-button-ico fa-solid fa-bars"></i>
+        </label>
     </div>
     
 </header>
