@@ -29,19 +29,29 @@
             <img src="{{ url_for('static', filename='img/logo/logo_inskape.svg') }}" alt="logo"
                 class="header__logo-img">
         </div>
-        <h3 class="header__text-logo">CorEngineer</h3>
+        <h3 class="header__logo-text">CorEngineer</h3>
     </a>
 
-    <!-- header's button bars-->
-    <div class="header__nav-menu">
-        <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars">
-        <label for="menu-bars" class="header__nav-menu-button" role="button" alt="menu">
-            <i class="header__nav-button-ico fa-solid fa-bars"></i>
+    
+    <!--search button at header-->
+    <div class="header__search">
+    
+        <input type="text" class="header__search-textfield" id="search-textfield" placeholder="search">
+        <label for="search-textfield">
+            <i class="header__search-ico fa-sharp fa-solid fa-magnifying-glass"></i>
         </label>
     </div>
-
+    
     <!--menu header-->
     <div class="header__menu">
+        <!-- header's button bars-->
+        <div class="header__nav-menu">
+            <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars">
+            <label for="menu-bars" class="header__nav-menu-button" role="button" alt="menu">
+                <i class="header__nav-button-ico fa-solid fa-bars"></i>
+            </label>
+        </div>
+        <!--header's menues-->
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
@@ -78,19 +88,6 @@
         </nav>
     </div>
     
-    <!--search button at header-->
-    <div class="header__search">
-        
-        <input 
-            type="text" 
-            class="header__search-textfield" 
-            id="search-textfield" 
-            placeholder="search"
-        >   
-        <label for="search-textfield">
-            <i class="header__search-ico fa-sharp fa-solid fa-magnifying-glass"></i>
-        </label>
-    </div>
 </header>
 <script src="{{url_for('static', filename='js/main.js')}}" type="module"></script>
 </body>

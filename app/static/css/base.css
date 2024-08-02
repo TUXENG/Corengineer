@@ -37,6 +37,11 @@ body {
     height: 85px;
     padding: 5px 10%;
     margin: 5px;
+    position: relative;
+    z-index: 1000;
+
+    container-name: header;
+    container-type: inline-size;
 }
 
 
@@ -60,7 +65,8 @@ body {
     filter: drop-shadow(-1px -1px 5px var(--light-primary-color));
     text-shadow: -1px -1px 1px var(--light-primary-color);
 }
-.header__text-logo{
+.header__logo-text{
+    display: block;
     margin: auto 5px;
     font-size: 30px;
     font-family: 'Nunito';
@@ -95,6 +101,7 @@ body {
 
 .header__search{
     display: flex;
+    justify-content: center;
     margin-left: 5px;
     
 }
@@ -147,4 +154,85 @@ body {
 
 .header__nav-button-ico:hover {
     transform: scale(1.1);
+}
+
+
+/*          HEADER QUERIES         */
+
+@media screen and (max-width: 1650px){
+    .header__logo-text{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+
+    .header{
+        justify-content: flex-end;
+        gap: 16px;
+    }
+    .header__nav-list{
+        display: none;
+    }
+    .header__link-logo {
+        margin-right: auto;
+    }
+
+    .header__nav-menu{
+        display: block;  
+    }
+    .header__logo-text {
+        display: flex;
+    }
+    .header__nav-checkbox-menu:checked~.header__nav-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .header {
+        justify-content: flex-end;
+        gap: 16px;
+        background-color: var(--divider-color);
+    }
+
+    .header__nav-list {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        background-color: var(--background-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        margin-top:12%;
+        align-items:baseline;
+        text-align: left;
+        justify-content:space-evenly;
+
+    }
+
+    .header__link-logo {
+        margin-right: auto;
+    }
+
+    .header__logo-text{
+        display: none;
+    }
+
+    .header__nav-menu {
+        display: block;
+    }
+    .header__nav-checkbox-menu:checked~.header__nav-list {
+        display: flex;
+        
+    }
+
+        .header__search-textfield {
+            max-width: 40vw;
+        }
+
 }
