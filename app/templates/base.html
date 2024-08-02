@@ -29,68 +29,66 @@
             <img src="{{ url_for('static', filename='img/logo/logo_inskape.svg') }}" alt="logo"
                 class="header__logo-img">
         </div>
-        <h3 class="header__corengineer-logo">CorEngineer</h3>
+        <h3 class="header__logo-text">CorEngineer</h3>
     </a>
 
-    <!-- header's button bars-->
-    <div class="header__nav-button">
-        <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars">
-        <label for="menu-bars" class="header__nav-label-button" role="button" alt="menu">
-            <i class="header__nav-button-ico fa-solid fa-bars"></i>
-        </label>
-    </div>
-
+    
     <!--menu header-->
     <div class="header__menu">
+        <!--header's menues-->
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
-                    <a href="{{url_for('home')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-house"> home</i>
+                    <a href="{{url_for('home')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-house"></i><h5 class="hader__nav-item-text">home</h5 class="hader__nav-item-text">
                     </a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="{{url_for('services')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fas fa-cogs"> services</i>
+                    <a href="{{url_for('services')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fas fa-cogs"></i><h5 class="hader__nav-item-text">services</h5 class="hader__nav-item-text">
                     </a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="{{url_for('portfolio')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"> portfolio</i>
+                    <a href="{{url_for('portfolio')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i><h5 class="hader__nav-item-text">portfolio </h5 class="hader__nav-item-text">
                     </a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="{{url_for('team')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-user-group"> team</i>
+                    <a href="{{url_for('team')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-user-group"></i><h5 class="hader__nav-item-text">team</h5 class="hader__nav-item-text">
                     </a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="{{url_for('contact')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-address-book"> contact</i>
+                    <a href="{{url_for('contact')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-address-book"></i><h5 class="hader__nav-item-text">contact</h5 class="hader__nav-item-text">
                     </a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="{{url_for('about')}}" class="header__nav-route">
-                        <i class="header__nav-item-ico fa-solid fa-circle-info"> about us</i>
+                    <a href="{{url_for('about')}}" class="header__nav-link">
+                        <i class="header__nav-item-ico fa-solid fa-circle-info"></i><h5 class="hader__nav-item-text">about </h5 class="hader__nav-item-text">
                     </a>
                 </li>
             </ul>
         </nav>
     </div>
-    
+
     <!--search button at header-->
     <div class="header__search">
+    
+        <input type="text" class="header__search-textfield" id="search-textfield" placeholder="search">
         <label for="search-textfield">
             <i class="header__search-ico fa-sharp fa-solid fa-magnifying-glass"></i>
         </label>
-        <input 
-            type="text" 
-            class="header__search-textfield" 
-            id="search-textfield" 
-            placeholder="search"
-        >   
     </div>
+    <!-- header's button bars-->
+    <div class="header__nav-menu-bars">
+        <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars">
+        <label for="menu-bars" class="header__nav-menu-button" role="button" alt="menu">
+            <i class="header__nav-button-ico fa-solid fa-bars"></i>
+        </label>
+    </div>
+    
 </header>
-<script src="{{url_for('static', filename='js/script.js')}}"></script>
+<script src="{{url_for('static', filename='js/main.js')}}" type="module"></script>
 </body>
 </html>
