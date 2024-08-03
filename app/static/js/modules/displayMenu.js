@@ -30,7 +30,7 @@ const displayMenu = (function () {
 
     function init() {
         buttonMenu.addEventListener('change', () => {
-            if (buttonMenu.checked || navMenu.style.display === 'none') {
+            if (buttonMenu.checked) {
                 showMenu();
             } else {
                 hideMenu();
