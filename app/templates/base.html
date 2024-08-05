@@ -81,6 +81,10 @@
                 </label>
             </div>        
         </header>
+        
+
+        {% block contentBlock %}{% endblock %}
+     
         <script src="{{url_for('static', filename='js/main.js')}}" type="module"></script>
     </body>
 </html>

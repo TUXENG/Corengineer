@@ -4,7 +4,7 @@
 :root {
     --light-primary-color: #f57c00;
     --primary-color: #fc944b;
-    --secundary-color: #fe4445;
+    --secondary-color: #fe4445;
     --accent-color: #ffbe58;
     --primary-text: #e0e0e0;
     --secondary-text: #6c757d;
@@ -41,6 +41,7 @@ body {
     z-index: 100;
     container-name: header;
     container-type: inline-size;
+    box-shadow: 10px 10px 25px var(--divider-color);
 }
 
 .header__link-logo{
@@ -122,12 +123,9 @@ body {
     flex-direction: row;
     gap: 16px;
     padding: 2px 6px 2px 6px; 
-    outline: none;
-    outline-offset: 5px;
 }
 
 .header__nav-link:hover {
-    outline: 1px solid var(--primary-color);
     transform: scale(1.1);
     filter: drop-shadow(1px 1px 5px var(--accent-color));
 }
@@ -209,3 +207,4 @@ body {
         margin-left: 2px;
     }
 }
+
