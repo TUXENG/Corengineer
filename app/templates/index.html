@@ -1,24 +1,56 @@
 {% extends 'base.html' %} {% block title %} Inicio - CorEngineer {% endblock %}
-{%block css_link%}
+{%block headblock %}
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
-{% endblock %} {% block content %}
-<section class="index">
-  <div class="index__background"></div>
-  <div class="index-grid">
-    <div class="index-grid__item">
-      <h3 class="index-grid__welcome">WELCOME TO</h3>
-      <dev class="index-grid__logo-container">
-        <img
-          src="{{url_for('static', filename='img/logo/logo_inskape.svg')}}"
-          alt="logo corengineer"
-          class="index-grid__logo"
-        />
-        <h1 class="index-grid__title">CORENGINEER</h1>
-        <h2 class="index-grid__subtitle">THE CORE OF INNOVATION</h2>
-      </dev>
-      <input type="button" value="ver más" class="index-grid__button-see-more">
+{% endblock %} {% block contentBlock %}
+<div class="index">
+  <div class="welcome">
+    <div class="welcome__background"></div>
+    <div class="welcome__content">
+      <div class="welcome__img-container">
+        <img 
+          src="{{url_for('static', filename='img/logo/logo_inskape.svg')}}" 
+          alt="CorEngineer's logo" 
+          class="welcome__img">
+      </div>
+      <h1 class="welcome__corengineer">CORENGINEER</h1>
+      <h2 class="welcome__slogan">THE CORE OF INNOVATION</h3>
+      <p class="welcome__description">
+        CorEngineer offers technological solutions tailored 
+        to your needs. We accompany you at every stage of your projects to
+        ensure a final product that meets your expectations. We have extensive 
+        experience in electronics, programming, robotics, and the planning and 
+        execution of technological projects.
+      </p>
+      <a href="#info" class="welcome__see-more" role="button">See more</a>
     </div>
-    {% include 'card.html' %}
   </div>
-</section>
+  <div class="info" id="info">
+    <div class="info__img-container" >
+      <img 
+        src="{{url_for('static', filename='img/logo/logo_inskape.svg')}}" 
+        alt="information picture" 
+        class="info__img"
+      >
+    </div>
+    <div class="info__text-container">
+      <h3 class="info__title">
+        {% block infoTitle%}Titulo{% endblock %}
+      </h3>
+      <p class="info__description">
+        {% block infoDescription %}
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem sunt 
+        temporibus aspernatur dolores cupiditate asperiores maiores id, est distinctio 
+        repellendus? Vero odit nemo dignissimos autem quis, perspiciatis esse beatae 
+        sequi!
+        {% endblock %}
+      </p>
+      <input type="submit" class="read-more" value="Learn more">
+      
+    </div>
+  </div>
+  
+  <div class="cards">
+    {% block cardBlock %}{% endblock %}
+  </div>
+</div>
 {% endblock %}

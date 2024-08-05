@@ -3,7 +3,6 @@ const displayMenu = (function () {
     const buttonMenu = document.querySelector('.header__nav-checkbox-menu');
     const nav = document.querySelector('.header__nav'); 
     const navList = document.querySelector('.header__nav-list');
-    const navMenu = document.querySelector('.header__nav-menu-bars');
 
     function showMenu() {
         setTimeout(() => {
