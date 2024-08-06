@@ -7,7 +7,11 @@ from flask import render_template
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    json_path = os.path.join(app.root_path, 'data/json/cards.json')
+    with open(json_path) as f:
+        cards = json.load(f)
+        
+    return render_template('index.html', cards=cards)
 
 @app.route('/services')
 def services():
