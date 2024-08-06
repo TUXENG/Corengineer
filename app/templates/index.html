@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block title %} Inicio - CorEngineer {% endblock %}
 {%block headblock %}
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/card.css')}}">
 {% endblock %} {% block contentBlock %}
 <div class="index">
   <div class="welcome">
@@ -50,7 +51,11 @@
   </div>
   
   <div class="cards">
-    {% block cardBlock %}{% endblock %}
+    <div class="grid">
+      {% for card in cards %}
+        {% include 'card.html' %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}

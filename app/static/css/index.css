@@ -83,8 +83,9 @@
     flex-direction: row;
     background-color: var(--divider-color);
     align-items: center;
-    width: 100%;
+    width: 97%;
     height: 280px;
+    margin: 10px;
     z-index: 2;
     box-shadow: 1px 1px 5px var(--divider-color);
 }
@@ -157,6 +158,13 @@
 }
 
 .cards{
-    width: 100%;
-    height: 30vh;
+    position: relative;
+    z-index: 2;
+    margin: 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
 }
