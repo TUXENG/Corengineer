@@ -28,6 +28,13 @@ body {
     background-color: var(--background-color);
 }
 
+.header__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-inline: 50px;
+}
+
 .header{
     background-color: var(--divider-color);
     display: flex;
@@ -44,19 +51,19 @@ body {
     box-shadow: 10px 10px 25px var(--divider-color);
 }
 
+
 .header__link-logo{
     display: flex;
     height: 100%;
     margin: auto;
-    margin-left: 20px;
+    margin-left: 5vw;
     justify-content: center;
     align-items: center;
 
 }
 
 .header__logo-img{
-    height: 50px;
-    max-width: 100%;
+    width: 75px;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -67,7 +74,7 @@ body {
 
 
 .header__logo-text{
-    display: none;
+    display: block;
     font-family: Montserrat;
     font-size: 25px;
     font-weight: bold;
@@ -121,7 +128,6 @@ body {
 .header__nav-link{
     display: flex;
     flex-direction: row;
-    font-size: 50px;
     gap: 16px;
     padding: 2px 6px 2px 6px; 
 }
@@ -131,55 +137,37 @@ body {
     filter: drop-shadow(1px 1px 5px var(--accent-color));
 }
 
-.header__search{
+.header__nav-item-ico {
+    font-size: 5vw;
+}
+
+.header__nav-item-text{
+    font-size: 5vw;
+}
+
+
+/*------- FOOTER SECTION ---------------*/
+.footer{
+    position: relative;
+    background-color: var(--divider-color);
+    padding: 10px;
+    z-index: 2;
+}
+
+.footer__container{
     display: flex;
-    align-items: center;
-    position: absolute;
-    right: 80px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    font-size: medium;
+
 }
-
-.header__search-textfield{
-    display: none;
-    background-color: transparent;
-    border: none;
-    border-radius: 4px;
-    max-width: 45vw;
-    width: 0;
-    padding-left: 5px;
-    padding: 8px;
-    margin: 4px;
-    font-family: 'Nunito';
-    font-size: small;
-    box-shadow: 0px 0px 3px var(--accent-color);
-}
-
-.header__search-textfield.show {
-    display: block;
-    width: 250px;
-    transition: all 0,3s ease;
-}
-
-.header__search-textfield:focus {
-    outline: none;
-}
-
-
 /*----------- HEADER QUERIES-----------*/
-
-@container header (min-width: 650px){
-    .header__logo-text{
-        display: block;
-    }
-
-}
 
 @container header (min-width: 1250px) {
     
     .header{
-        justify-content: center;
-    }
-    .header__logo-text {
-        display: none;
+        justify-content: flex-end;
     }
 
     .header__nav-menu-button{
@@ -189,6 +177,7 @@ body {
     .header__nav {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
         position: static;
         height: auto;
         margin-left: 50px;
@@ -200,18 +189,16 @@ body {
         flex-direction: row;
         height: var(--header-height);
         margin-left: 40px;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 
-
-    .header__search{
-        position: static;
-        margin-right: 5vw;
+    .header__nav-item-ico {
+        font-size: 30px;
     }
 
-    .header__search-textfield{
-        margin-left: 2px;
+    .header__nav-item-text {
+        font-size: 30px;
     }
 }
 

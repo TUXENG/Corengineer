@@ -35,6 +35,9 @@
     margin: auto;
     position: relative;
     z-index: 1;
+
+    container-name: welcome;
+    container-type: inline-size;
 }
 
 
@@ -53,26 +56,30 @@
     
 }
 
+.welcome__img{
+    max-width: 400px;
+    width: 50vw;
+}
 
 .welcome__corengineer{
     font-family: Montserrat, 'Nunito';
-    font-size: 2.0rem;
+    font-size: 10vw;
     font-weight: bold;
-    color: var(--primary-text);
+    color: var(--primary-color);
     text-shadow: 2px 2px 5px var(--secondary-text);
 
 }
 
 .welcome__slogan{
     font-family: Montserrat, 'Nunito';
-    font-size: 0.8rem;
+    font-size: 5vw;
     color: var(--primary-text);
     text-shadow: 2px 2px 5px var(--secondary-text);
 }
 
 .welcome__description{
     font-family: Montserrat, 'Nunito';
-    font-size: .7rem;
+    font-size: 3vw;
     color: var(--primary-text);
     text-align: justify;
     margin: 20px;
@@ -175,8 +182,42 @@
 }
 
 .button{
-    border-radius: 8px;
+    font-weight: bold;
 }
 
 /*--------- INDEX QUERIES ----------*/
 
+@container welcome (min-width: 620px) {
+    .welcome__content{
+        min-width: 600px;
+        max-width: 900px;
+    }
+
+}
+@container welcome (min-width: 920px) {
+    .welcome__content {
+        min-width: 900px;
+        max-width: 1250px;
+    }
+
+    .welcome__corengineer {
+        font-size: 100px;
+    }
+    
+    .welcome__slogan{
+        font-size: 50px;
+    }
+
+    .welcome__description{
+        font-size: 30px;
+        margin: 20px;
+    }
+
+}
+
+@container welcome (min-width: 1250px) {
+    .welcome__content {
+        max-width: 1250px;
+    }
+
+}
