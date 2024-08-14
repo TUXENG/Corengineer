@@ -1,0 +1,17 @@
+<div class="grid-item">
+    <div class="card">
+        <div class="card__image-container">
+            <img 
+                src="{{ url_for('static', filename=course.image) }}" 
+                alt="{{ course.alt }}"
+                class="card__image" 
+            />
+        </div>
+        <div class="card__content">
+            <h3 class="card__title">{{ course.title }}</h3>
+            <p class="card__description">{{ course.description }}</p>
+            <p class="card__state">Estado: {{ course.state }}</p>
+            <p class="card__cost">Costo: {{ course.cost }}</p>
+        </div>
+    </div>
+</div>
