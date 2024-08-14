@@ -1,2 +1,31 @@
-{% extends 'base.html' %} {% block title %}Services CorEngineer{% endblock %} {%
-block content %} {% endblock %}
+{% extends 'base.html' %} {% block title %}Services CorEngineer{% endblock %} 
+
+{% block headBlock %} 
+<link rel="stylesheet" href="{{url_for('static', filename='css/services.css')}}">
+{% endblock %}
+
+{%block contentBlock %}
+<div class="services">
+    <div class="service-grid">
+        <div class="service-grid__item nav-service">
+            <nav class="nav-services">
+                <ul class="nav-services__list">
+                    <li class="nav-services__item">Programación WEB</li>
+                    <li class="nav-services__item">Programación móvil</li>
+                    <li class="nav-services__item">Sistemas embebidos</li>
+                    <li class="nav-services__item">IOT y Robotica</li>
+                    <li class="nav-services__item">Electrónica industrial</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="service-grid__item body-service">
+
+        </div>
+        <div class="service-grid__item article-service">
+            
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
