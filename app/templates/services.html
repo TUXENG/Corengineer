@@ -19,7 +19,23 @@
             </nav>
         </div>
         <div class="service-grid__item body-service">
-
+            <div class="body-grid">
+                <div class="body-grid__item">
+                    <h2>SERVICOS DISPONIBLES</h2>
+                    <p>
+                        En CorEngineer, ofrecemos una gama completa de servicios tecnológicos diseñados para satisfacer las necesidades de tu
+                        proyecto. Desde la programación web y móvil hasta sistemas embebidos, IoT, robótica y electrónica industrial,
+                        contamos con la experiencia y el conocimiento necesarios para llevar tus ideas a la realidad. Nuestro enfoque se
+                        basa en la innovación y la eficiencia, asegurando que cada solución sea personalizada y efectiva. Explora nuestros
+                        servicios y descubre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.
+                    </p>    
+                </div>
+                <div class="grid-card">
+                    {% for card in services %}
+                        {% include 'card.html' %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
         <div class="service-grid__item article-service">
             

@@ -7,7 +7,7 @@ from flask import render_template
 
 @app.route('/')
 def home():
-    json_path = os.path.join(app.root_path, 'data/json/cards.json')
+    json_path = os.path.join(app.root_path, 'data/json/index_cards.json')
     with open(json_path) as f:
         cards = json.load(f)
         
@@ -15,7 +15,11 @@ def home():
 
 @app.route('/services')
 def services():
-    return render_template('services.html')
+    json_path = os.path.join(app.root_path, 'data/json/services_card.json')
+    with open(json_path) as f:
+        services=json.load(f)
+
+    return render_template('services.html', services=services)
 
 @app.route('/portfolio')
 def portfolio():

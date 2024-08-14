@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Programación Web",
+      "description": "Desarrollo de sitios web modernos y escalables utilizando tecnologías avanzadas para garantizar rendimiento, seguridad y una experiencia de usuario óptima.",
+      "image": "img/services/web_programming.png",
+      "alt": "Imagen representativa de programación web"
+    },
+    {
+      "title": "Programación Móvil",
+      "description": "Creación de aplicaciones móviles para Android e iOS, optimizadas para un rendimiento superior y diseñadas para proporcionar una experiencia de usuario fluida.",
+      "image": "img/services/mobile_programming.png",
+      "alt": "Imagen representativa de programación móvil"
+    },
+    {
+      "title": "Sistemas Embebidos",
+      "description": "Desarrollo de soluciones de hardware y software integradas, diseñadas para operar en entornos específicos con alta eficiencia y confiabilidad.",
+      "image": "img/services/embedded_systems.png",
+      "alt": "Imagen representativa de sistemas embebidos"
+    },
+    {
+      "title": "IoT y Robótica",
+      "description": "Implementación de tecnologías IoT y sistemas robóticos para automatizar procesos, mejorar la conectividad y optimizar el control de sistemas complejos.",
+      "image": "img/services/iot_robotics.png",
+      "alt": "Imagen representativa de IoT y robótica"
+    },
+    {
+      "title": "Electrónica Industrial",
+      "description": "Soluciones de electrónica industrial diseñadas para mejorar la productividad, la eficiencia y la seguridad en entornos industriales.",
+      "image": "img/services/industrial_electronics.png",
+      "alt": "Imagen representativa de electrónica industrial"
+    }
+  ]
+

@@ -50,7 +50,7 @@
     min-width: 240px;
     max-width: 600px;
     margin: auto;
-    margin-top: calc(12vh + var(--header-height)); 
+    margin-top: calc(4vh + var(--header-height)); 
     margin-bottom: 20px;
     filter: drop-shadow(2px 2px 5px var(--secondary-text));
     
