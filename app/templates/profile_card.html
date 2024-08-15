@@ -1,0 +1,29 @@
+<div class="grid-item"">
+    <div class="card">
+        <div class="card__image-container">
+            <img 
+                src="{{url_for('static', filename=card.image)}}" 
+                alt="{{card.alt}}"
+                class="card__image" 
+            />
+        </div>
+        <div class="card__content">
+            <h3 class="card__name">{{card.name}}</h3>
+            <h4 class="card__job-title">{{ card.job_title }}</h4>
+            <a  href="{{card.email}}" class="card__email">
+                <i class="fab fa-envelope"></i>
+            </a>
+            <h5 class="card__cel">{{card.cel}}
+                <i class="fab fa-phone"></i>
+            </h5>
+            <p class="card__description">card.description</p>
+            
+            <a href="{{card.linkedin}}" class="card__link linkdin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="{{card.github}}" class="card__link github">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</div>

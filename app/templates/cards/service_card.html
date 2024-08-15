@@ -1,0 +1,24 @@
+<div class="grid-item">
+    <div class="card">
+        <div class="card__image-container">
+            <img 
+                src="{{ url_for('static', filename=service.image) }}" 
+                alt="{{ service.alt }}"
+                class="card__image" 
+            />
+        </div>
+        <div class="card__content">
+            <h3 class="card__title">{{ service.title }}</h3>
+            <p class="card__description">{{ service.description }}</p>
+            <p class="card__state">Estado: {{ service.state }}</p>
+            <p class="card__personal">
+                Personal: 
+                <ul>
+                    {% for person in service.personal %}
+                        <li>{{ person }}</li>
+                    {% endfor %}
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
