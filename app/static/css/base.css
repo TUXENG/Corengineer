@@ -45,7 +45,7 @@ body {
     height: var(--header-height);   
     margin: auto;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     container-name: header;
     container-type: inline-size;
     box-shadow: 10px 10px 25px var(--divider-color);
@@ -145,6 +145,11 @@ body {
     font-size: 5vw;
 }
 
+
+/*-------- MAIN SECTION -----------------*/
+.main{
+    padding-top: 12vh;
+}
 
 /*------- FOOTER SECTION ---------------*/
 .footer{

@@ -1,0 +1,140 @@
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    text-align: justify;
+    margin: auto;
+}
+
+.article-service{
+    display: none;
+}
+
+.nav-service {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    background-color: var(--divider-color);
+    z-index: 100;
+}
+
+.nav-service__item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-service__item-link:hover {
+    background-color: var(--primary-text);
+}
+
+
+.text-nav{
+    display: none;
+}
+
+.body-service{
+    margin-inline: 70px;
+    padding: 5px;
+    flex: 1;
+}
+
+.body-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+body-grid__item:first-child {
+    grid-column: 1 / -1;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* Estilos generales para el contenedor de tarjetas */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    /* Ajusta el ancho según tus necesidades */
+    max-width: 100%;
+    /* Asegura que no se desborde del contenedor */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card__image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Mantiene la relación de aspecto de la imagen */
+}
+
+.card__content {
+    padding: 15px;
+}
+
+.card__title {
+    font-size: 1.25em;
+    margin: 0;
+    color: #333;
+}
+
+.card__description {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.card__state {
+    font-size: 0.9em;
+    color: #007BFF;
+    /* Color del estado, cambia según tu diseño */
+    margin: 10px 0;
+}
+
+.card__personal {
+    font-size: 0.9em;
+    color: #444;
+}
+
+.card__personal ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.card__personal li {
+    margin-bottom: 5px;
+}
