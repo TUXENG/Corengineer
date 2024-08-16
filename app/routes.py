@@ -28,12 +28,12 @@ def services():
     Ruta para la página de servicios.
 
     Carga y valida los datos de los servicios y perfiles desde archivos JSON.
-    Si hay un error en la validación de cualquiera de los archivos, muestra un mensaje de error y redirige a la página de error.
+    Si hay un error en la validación de cualquiera de los archivos, muestra un 
+    mensaje de error y redirige a la página de error.
     De lo contrario, renderiza la página de servicios con los datos validados.
     """
     services_path = os.path.join(bp.root_path, 'data/json/service_card.json')
     profile_path = os.path.join(bp.root_path, 'data/json/profile_card.json')
-    
     offerings, error_services = validate_service_json(services_path)
     profiles, error_profiles = validate_profile_json(profile_path)
 
@@ -43,7 +43,11 @@ def services():
     if error_profiles:
         flash(f"Error validating profiles JSON: {error_profiles}", 'error')
 
-    return render_template('services.html', services=offerings['services'], profiles=profiles['profiles'])
+    return render_template(
+        'services.html', 
+        services=offerings['services'],
+        profiles=profiles['profiles']
+        )
 
 @bp.route('/portfolio')
 def portfolio():
@@ -68,7 +72,8 @@ def contact():
     """
     Ruta para la página de contacto.
 
-    Renderiza la página de contacto donde los usuarios pueden obtener información de contacto.
+    Renderiza la página de contacto donde los usuarios pueden obtener 
+    información de contacto.
     """
     return render_template('contact.html')
 
@@ -77,7 +82,8 @@ def about():
     """
     Ruta para la página de 'Sobre Nosotros'.
 
-    Renderiza la página 'Sobre Nosotros' que proporciona información sobre la empresa u organización.
+    Renderiza la página 'Sobre Nosotros' que proporciona información sobre la 
+    empresa u organización.
     """
     return render_template('about.html')
 
@@ -86,6 +92,7 @@ def error():
     """
     Ruta para la página de error.
 
-    Renderiza una página genérica de error cuando ocurre algún problema en la aplicación.
+    Renderiza una página genérica de error cuando ocurre algún problema 
+    en la aplicación.
     """
     return render_template('error.html')
