@@ -31,7 +31,7 @@ def services():
     Si hay un error en la validación de cualquiera de los archivos, muestra un mensaje de error y redirige a la página de error.
     De lo contrario, renderiza la página de servicios con los datos validados.
     """
-    services_path = os.path.join(bp.root_path, 'data/json/services_card.json')
+    services_path = os.path.join(bp.root_path, 'data/json/service_card.json')
     profile_path = os.path.join(bp.root_path, 'data/json/profile_card.json')
     
     offerings, error_services = validate_service_json(services_path)
