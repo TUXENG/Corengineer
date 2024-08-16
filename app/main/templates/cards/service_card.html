@@ -11,14 +11,14 @@
             <h3 class="card__title">{{ service.title }}</h3>
             <p class="card__description">{{ service.description }}</p>
             <p class="card__state">Estado: {{ service.state }}</p>
-            <p class="card__personal">
-                Personal: 
+            <div class="card__personal">
+                <h4>Personal:</h4> 
                 <ul>
                     {% for person in service.personal %}
                         <li>{{ person }}</li>
                     {% endfor %}
                 </ul>
-            </p>
+            </div>
         </div>
     </div>
 </div>

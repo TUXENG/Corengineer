@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'partials/metadata.html' %}
+        {% include 'partials/links.html' %}
+        <title>{% block title%} {% endblock %}</title>
+    </head>
+    <body>
+        {% include 'partials/header.html' %}
+        
+        <main class="main">
+            {% block contentBlock %}{% endblock %}
+        </main>
+        {% include 'partials/footer.html' %}
+        
+        <script src="{{url_for('static', filename='js/main.js')}}" type="module"></script>
+    </body>
+
+    
+</html>

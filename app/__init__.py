@@ -1,8 +1,11 @@
-from flask import Flask
-import subprocess
+"""init principal"""
 import os
+import subprocess
+
+from flask import Flask
+
 from config  import Config
-from .routes import bp as main_bp
+from .main.routes import bp as main_bp
 
 def create_app():
     """

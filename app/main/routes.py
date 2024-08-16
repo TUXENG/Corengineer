@@ -4,7 +4,7 @@ from flask import render_template, redirect, url_for, flash, Blueprint
 from app.scripts.validate_scheme import validate_course_json
 from app.scripts.validate_scheme import validate_service_json, validate_profile_json
 
-bp = Blueprint('main', __name__)
+bp = Blueprint('main', __name__, template_folder='templates')
 
 @bp.route('/')
 def home():
@@ -15,7 +15,7 @@ def home():
     Si hay un error en la validación, redirige a una página de error.
     De lo contrario, renderiza la página principal con los datos de los cursos.
     """
-    courses_path = os.path.join(bp.root_path, 'data/json/course_card.json')
+    courses_path = os.path.join(bp.root_path, '..' ,'data/json/course_card.json')
     courses, error_course = validate_course_json(courses_path)
     if error_course:
         flash(f"Error validating courses JSON: {error_course}", 'error')
@@ -32,8 +32,8 @@ def services():
     mensaje de error y redirige a la página de error.
     De lo contrario, renderiza la página de servicios con los datos validados.
     """
-    services_path = os.path.join(bp.root_path, 'data/json/service_card.json')
-    profile_path = os.path.join(bp.root_path, 'data/json/profile_card.json')
+    services_path = os.path.join(bp.root_path, '..' ,'data/json/service_card.json')
+    profile_path = os.path.join(bp.root_path, '..' ,'data/json/profile_card.json')
     offerings, error_services = validate_service_json(services_path)
     profiles, error_profiles = validate_profile_json(profile_path)
 
