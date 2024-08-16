@@ -4,26 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title%} {% endblock %}</title>
-        <link 
-            rel="stylesheet" 
-            href="{{url_for('static', filename='css/base.css')}}"
-        >
-        <link 
-            rel="icon" 
-            href="{{ url_for('static', filename='img/logo/logo_inskape.svg') }}" 
-            type="image/svg"
-        >
-        <link 
-            rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-        />
-        
-        {% block headBlock %} {% endblock %}
+        {% include 'partials/links.html' %}
     </head>
     <body>
         <header class="header">
                 <!--Logo header-->
-                <a href="{{url_for('home')}}" class="header__link-logo">
+                <a href="{{url_for('main.home')}}" class="header__link-logo">
                     <div class="header__logo-container">
                         <img src="{{ url_for('static', filename='img/logo/logo_inskape.svg') }}" alt="logo"
                             class="header__logo-img">
@@ -39,32 +25,32 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="{{url_for('home')}}" class="header__nav-link">
+                            <a href="{{url_for('main.home')}}" class="header__nav-link">
                                 <i class="header__nav-item-ico fa-solid fa-house"></i><h5 class="header__nav-item-text">home</h5 >
                             </a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{url_for('services')}}" class="header__nav-link">
+                            <a href="{{url_for('main.services')}}" class="header__nav-link">
                                 <i class="header__nav-item-ico fas fa-cogs"></i><h5 class="header__nav-item-text">services</h5 >
                             </a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{url_for('portfolio')}}" class="header__nav-link">
+                            <a href="{{url_for('main.portfolio')}}" class="header__nav-link">
                                 <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i><h5 class="header__nav-item-text">portfolio </h5 >
                             </a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{url_for('team')}}" class="header__nav-link">
+                            <a href="{{url_for('main.team')}}" class="header__nav-link">
                                 <i class="header__nav-item-ico fa-solid fa-user-group"></i><h5 class="header__nav-item-text">team</h5 >
                             </a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{url_for('contact')}}" class="header__nav-link">
+                            <a href="{{url_for('main.contact')}}" class="header__nav-link">
                                 <i class="header__nav-item-ico fa-solid fa-address-book"></i><h5 class="header__nav-item-text">contact</h5 >
                             </a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{url_for('about')}}" class="header__nav-link">
+                            <a href="{{url_for('main.about')}}" class="header__nav-link">
                                 <i class="header__nav-item-ico fa-solid fa-circle-info"></i><h5 class="header__nav-item-text">about </h5 >
                             </a>
                         </li>
@@ -72,9 +58,10 @@
                 </nav>   
         </header>
         
-
-        {% block contentBlock %}{% endblock %}
-     
+        <main class="main">
+            {% block contentBlock %}{% endblock %}
+        </main>
+        
         <script src="{{url_for('static', filename='js/main.js')}}" type="module"></script>
     </body>
 
