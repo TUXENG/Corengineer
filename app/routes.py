@@ -1,9 +1,12 @@
+""" Importaciones """
 import os
-from flask import current_app as app
-from flask import render_template, redirect, url_for, flash
-from app.scripts.validate_scheme import validate_course_json, validate_service_json, validate_profile_json
+from flask import render_template, redirect, url_for, flash, Blueprint
+from app.scripts.validate_scheme import validate_course_json
+from app.scripts.validate_scheme import validate_service_json, validate_profile_json
 
-@app.route('/')
+bp = Blueprint('main', __name__)
+
+@bp.route('/')
 def home():
     """
     Ruta principal de la aplicación.
@@ -12,14 +15,14 @@ def home():
     Si hay un error en la validación, redirige a una página de error.
     De lo contrario, renderiza la página principal con los datos de los cursos.
     """
-    courses_path = os.path.join(app.root_path, 'data/json/course_card.json')
+    courses_path = os.path.join(bp.root_path, 'data/json/course_card.json')
     courses, error_course = validate_course_json(courses_path)
     if error_course:
         flash(f"Error validating courses JSON: {error_course}", 'error')
-        return redirect(url_for('error'))
+        return redirect(url_for('main.error'))
     return render_template('index.html', courses=courses['courses'])
 
-@app.route('/services')
+@bp.route('/services')
 def services():
     """
     Ruta para la página de servicios.
@@ -28,21 +31,21 @@ def services():
     Si hay un error en la validación de cualquiera de los archivos, muestra un mensaje de error y redirige a la página de error.
     De lo contrario, renderiza la página de servicios con los datos validados.
     """
-    services_path = os.path.join(app.root_path, 'data/json/services_card.json')
-    profile_path = os.path.join(app.root_path, 'data/json/profile_card.json')
+    services_path = os.path.join(bp.root_path, 'data/json/services_card.json')
+    profile_path = os.path.join(bp.root_path, 'data/json/profile_card.json')
     
     offerings, error_services = validate_service_json(services_path)
     profiles, error_profiles = validate_profile_json(profile_path)
 
     if error_services:
         flash(f"Error validating services JSON: {error_services}", 'error')
-        return redirect(url_for('error'))
+        return redirect(url_for('main.error'))
     if error_profiles:
         flash(f"Error validating profiles JSON: {error_profiles}", 'error')
 
     return render_template('services.html', services=offerings['services'], profiles=profiles['profiles'])
 
-@app.route('/portfolio')
+@bp.route('/portfolio')
 def portfolio():
     """
     Ruta para la página del portafolio.
@@ -51,7 +54,7 @@ def portfolio():
     """
     return render_template('portfolio.html')
 
-@app.route('/team')
+@bp.route('/team')
 def team():
     """
     Ruta para la página del equipo.
@@ -60,7 +63,7 @@ def team():
     """
     return render_template('team.html')
 
-@app.route('/contact')
+@bp.route('/contact')
 def contact():
     """
     Ruta para la página de contacto.
@@ -69,7 +72,7 @@ def contact():
     """
     return render_template('contact.html')
 
-@app.route('/about_us')
+@bp.route('/about_us')
 def about():
     """
     Ruta para la página de 'Sobre Nosotros'.
@@ -78,7 +81,7 @@ def about():
     """
     return render_template('about.html')
 
-@app.route('/error')
+@bp.route('/error')
 def error():
     """
     Ruta para la página de error.

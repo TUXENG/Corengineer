@@ -1,8 +1,5 @@
-{% extends 'base.html' %} {% block title %}Services CorEngineer{% endblock %} 
+{% extends 'partials/base.html' %} {% block title %}Services CorEngineer{% endblock %} 
 
-{% block headBlock %} 
-<link rel="stylesheet" href="{{url_for('static', filename='css/services.css')}}">
-{% endblock %}
 
 {%block contentBlock %}
 <div class="services">
@@ -43,8 +40,8 @@
         </nav>
     </div>
     <div class="body-service">
-        <div class="body-grid">
-            <div class="body-grid__item">
+        <div class="body-service-grid">
+            <div class="body-service-grid__item">
                 <h2>SERVICOS DISPONIBLES</h2>
                 <p>
                     En CorEngineer, ofrecemos una gama completa de servicios tecnológicos diseñados para satisfacer las necesidades de tu
@@ -54,7 +51,7 @@
                     servicios y descubre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.
                 </p>    
             </div>
-            <div class="body-grid__item">
+            <div class="body-service-service-grid__item">
                 {% for service in services %}
                     {% include 'cards/service_card.html' %}
                 {% endfor %}
