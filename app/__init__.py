@@ -20,7 +20,7 @@ def create_app():
     Returns:
         Flask: La instancia de la aplicación Flask.
     """
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='static')
     app.config.from_object(Config)
 
     script_path = os.path.join(os.path.dirname(__file__), 'scripts', 'generate_json.py')

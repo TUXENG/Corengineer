@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --background-color: #121212;
+    --primary-color: #009688;
+    --secondary-color: #ff5722;
+    --accent-color: #00bcd4;
+    --light-primary-color: #26a69a;
+    --light-secondary-color: #ff8a65;
+    --light-accent-color: #4dd0e1;
+    --dark-primary-color: #00796b;
+    --dark-secondary-color: #e64a19;
+    --dark-accent-color: #00838f;
+    --primary-text: #e0e0e0;
+    --secondary-text: #757575;
+    --divider-color: #424242;
+
+
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-nunito: 'Nunito', sans-serif;
+    --font-family-montserrat: 'Montserrat', sans-serif;
+
+    --font-size-xsmall: 8px;
+    --font-size-small: 12px;
+    --font-size-mid: 16px;
+    --font-size-big: 20px;
+    --font-size-xbig: 24px;
+
+    --margin-xsmall: 3px;
+    --margin-small: 5px,
+    --margin-mid: 8px;
+    --margin-big: 13px;
+    --margin-xbig: 21px;
+
+    --padding-xsmall: 2px;
+    --padding-small: 3px,
+    --padding-mid: 5px;
+    --padding-big: 7px;
+    --padding-xbig: 11px;
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-text);
+    font-size: var(--font-size-mid);
+    font-family: var(--font-family-roboto);
+    text-decoration: none;
+}
