@@ -16,19 +16,19 @@
     <nav class="header__nav">
         <ul class="header__nav-list">
             <li class="header__nav-item">
-                <a href="{{url_for('main.home')}}" class="header__nav-link">
+                <a href="{{url_for('main.home')}}" class="header__nav-link {% if request.endpoint == 'main.home' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-solid fa-house"></i>
                     <h5 class="header__nav-item-text">home</h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.services')}}" class="header__nav-link">
+                <a href="{{url_for('main.services')}}" class="header__nav-link {% if request.endpoint == 'main.services' %}active{% endif %}">
                     <i class="header__nav-item-ico fas fa-cogs"></i>
                     <h5 class="header__nav-item-text">services</h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.portfolio')}}" class="header__nav-link">
+                <a href="{{url_for('main.portfolio')}}" class="header__nav-link {% if request.endpoint == 'main.portfolio' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i>
                     <h5 class="header__nav-item-text">portfolio </h5>
                 </a>
