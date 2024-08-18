@@ -1,8 +1,11 @@
-from flask import Flask
-import subprocess
+"""app's init"""
 import os
+import subprocess
+
+from flask import Flask
+
 from config  import Config
-from .routes import bp as main_bp
+from .main.routes import bp as main_bp
 
 def create_app():
     """
@@ -17,7 +20,7 @@ def create_app():
     Returns:
         Flask: La instancia de la aplicación Flask.
     """
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='static')
     app.config.from_object(Config)
 
     script_path = os.path.join(os.path.dirname(__file__), 'scripts', 'generate_json.py')
@@ -25,5 +28,5 @@ def create_app():
     
     with app.app_context():
         app.register_blueprint(main_bp)
-        
+
     return app

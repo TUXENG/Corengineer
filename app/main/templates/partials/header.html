@@ -1,0 +1,56 @@
+<header class="header">
+    <!--Logo header-->
+    <a href="{{url_for('main.home')}}" class="header__link-logo">
+        <div class="header__logo-container">
+            <img src="{{ url_for('static', filename='img/logo/logo.svg') }}" alt="logo"
+                class="header__logo-img">
+        </div>
+        <h3 class="header__logo-text">CorEngineer</h3>
+    </a>
+
+    <input type="checkbox" class="header__nav-checkbox-menu" id="menu-bars" role="button">
+    <label for="menu-bars" class="header__nav-menu-button" role="button" alt="menu">
+        <i id="menu-icon" class="header__nav-button-ico fa-solid fa-bars"></i>
+    </label>
+
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__nav-item">
+                <a href="{{url_for('main.home')}}" class="header__nav-link {% if request.endpoint == 'main.home' %}active{% endif %}">
+                    <i class="header__nav-item-ico fa-solid fa-house"></i>
+                    <h5 class="header__nav-item-text">Home</h5>
+                </a>
+            </li>
+            <li class="header__nav-item">
+                <a href="{{url_for('main.services')}}" class="header__nav-link {% if request.endpoint == 'main.services' %}active{% endif %}">
+                    <i class="header__nav-item-ico fas fa-cogs"></i>
+                    <h5 class="header__nav-item-text">Services</h5>
+                </a>
+            </li>
+            <li class="header__nav-item">
+                <a href="{{url_for('main.portfolio')}}" class="header__nav-link {% if request.endpoint == 'main.portfolio' %}active{% endif %}">
+                    <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i>
+                    <h5 class="header__nav-item-text">Portfolio </h5>
+                </a>
+            </li>
+            <li class="header__nav-item">
+                <a href="{{url_for('main.team')}}" class="header__nav-link">
+                    <i class="header__nav-item-ico fa-solid fa-user-group"></i>
+                    <h5 class="header__nav-item-text">Team</h5>
+                </a>
+            </li>
+            <li class="header__nav-item">
+                <a href="{{url_for('main.contact')}}" class="header__nav-link">
+                    <i class="header__nav-item-ico fa-solid fa-address-book"></i>
+                    <h5 class="header__nav-item-text">Contact</h5>
+                </a>
+            </li>
+            <li class="header__nav-item">
+                <a href="{{url_for('main.about')}}" class="header__nav-link">
+                    <i class="header__nav-item-ico fa-solid fa-circle-info"></i>
+                    <h5 class="header__nav-item-text">About </h5>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
