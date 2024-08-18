@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --background-color: #1C1C1C;
-    --background-color-opacity: #1c1c1c79;
-    --primary-color: #009688;
-    --secondary-color: #ff5722;
-    --accent-color: #00bcd4;
+    --background-color: #212529;
+    --background-color-opacity: #21252979;
+    --primary-color: #9fef00bf;
+    --secondary-color: #9fef00;
+    --accent-color: #f00000;
     --light-primary-color: #26a69a;
     --light-secondary-color: #ff8a65;
     --light-accent-color: #4dd0e1;
@@ -14,8 +14,8 @@
     --dark-accent-color: #00838f;
     --primary-text: #e0e0e0;
     --secondary-text: #757575;
-    --divider-color: #333333;
-    --divider-color-opacity: #33333355;
+    --divider-color: #22272c;
+    --divider-color-opacity: #282e3555;
 
 
     --font-family-roboto: 'Roboto', sans-serif;
@@ -39,7 +39,20 @@
     --padding-mid: 5px;
     --padding-big: 7px;
     --padding-xbig: 11px;
+    --padding-super: 13px;
+    --padding-xsuper: 17px;
 
+
+    --one-level: -1; 
+    --two-level: 1;
+    --three-level: 10;
+    --four-level: 100;
+    --five-level: 1000;
+    --six-level: 10000;
+    --seven-level: 100000;
+    --eight-level: 1000000;
+    --nine-level: 10000000;
+    --ten-level: 100000000;
 
 }
 
@@ -50,7 +63,7 @@
     box-sizing: border-box;
     color: var(--primary-text);
     font-size: var(--font-size-mid);
-    font-family: var(--font-family-roboto);
+    font-family: var(--font-family-montserrat);
     text-decoration: none;
 }
 

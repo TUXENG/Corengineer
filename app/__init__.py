@@ -1,4 +1,4 @@
-"""init principal"""
+"""app's init"""
 import os
 import subprocess
 
@@ -28,5 +28,5 @@ def create_app():
     
     with app.app_context():
         app.register_blueprint(main_bp)
-        
+
     return app

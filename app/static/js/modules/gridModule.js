@@ -13,7 +13,7 @@ const gridModule = (function () {
 
     function init(maxItems = 4) {
         showItems(maxItems);
-        console.log('Hay ${items.length} para mostrar');
+        console.log('Hay %s cards para mostrar', items.length);
     }
 
     return {
