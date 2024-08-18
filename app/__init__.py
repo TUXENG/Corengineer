@@ -5,7 +5,8 @@ import subprocess
 from flask import Flask
 
 from config  import Config
-from .main.routes import bp as main_bp
+from app.main.routes import bp as main_bp
+from app.auth.routes import bp as auth_bp
 
 def create_app():
     """
@@ -28,5 +29,6 @@ def create_app():
     
     with app.app_context():
         app.register_blueprint(main_bp)
+        app.register_blueprint(auth_bp, url_prefix='/auth')
 
     return app
