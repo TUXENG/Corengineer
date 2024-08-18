@@ -1,0 +1,76 @@
+{
+    "services": [
+        {
+            "image": "web_programming.jpg",
+            "alt": "Programación Web",
+            "title": "Programación Web",
+            "description": "Desarrollo de aplicaciones y sitios web utilizando tecnologías modernas y eficientes.",
+            "state": "Disponible",
+            "personal": [
+                "Desarrollador Frontend",
+                "Desarrollador Backend",
+                "Full Stack Developer"
+            ]
+        },
+        {
+            "image": "mobile_development.jpg",
+            "alt": "Desarrollo Móvil",
+            "title": "Desarrollo Móvil",
+            "description": "Creación de aplicaciones móviles para plataformas iOS y Android con un enfoque en la experiencia del usuario.",
+            "state": "Disponible",
+            "personal": [
+                "Desarrollador iOS",
+                "Desarrollador Android",
+                "Desarrollador Cross-Platform"
+            ]
+        },
+        {
+            "image": "embedded_systems.jpg",
+            "alt": "Sistemas Embebidos",
+            "title": "Sistemas Embebidos",
+            "description": "Desarrollo de sistemas embebidos para diversas aplicaciones, desde electrodomésticos hasta dispositivos médicos.",
+            "state": "Disponible",
+            "personal": [
+                "Ingeniero en Sistemas Embebidos",
+                "Desarrollador de Firmware",
+                "Especialista en Hardware"
+            ]
+        },
+        {
+            "image": "robotics.jpg",
+            "alt": "Robótica",
+            "title": "Robótica",
+            "description": "Diseño y construcción de robots para automatización y tareas específicas, integrando hardware y software.",
+            "state": "Disponible",
+            "personal": [
+                "Ingeniero en Robótica",
+                "Desarrollador de Software para Robots",
+                "Especialista en Control"
+            ]
+        },
+        {
+            "image": "iot.jpg",
+            "alt": "IoT",
+            "title": "Internet de las Cosas (IoT)",
+            "description": "Desarrollo de soluciones IoT para conectar y gestionar dispositivos inteligentes a través de internet.",
+            "state": "Disponible",
+            "personal": [
+                "Ingeniero IoT",
+                "Desarrollador de Software IoT",
+                "Especialista en Conectividad"
+            ]
+        },
+        {
+            "image": "industrial_electronics.jpg",
+            "alt": "Electrónica Industrial",
+            "title": "Electrónica Industrial",
+            "description": "Diseño y mantenimiento de sistemas electrónicos para procesos industriales y automatización.",
+            "state": "Disponible",
+            "personal": [
+                "Ingeniero en Electrónica Industrial",
+                "Técnico de Mantenimiento",
+                "Especialista en Automatización"
+            ]
+        }
+    ]
+}

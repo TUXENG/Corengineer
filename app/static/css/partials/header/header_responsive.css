@@ -1,0 +1,83 @@
+/* Estilos para pantallas medianas (tabletas) */
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 15px 30px;
+    }
+
+    .header__link-logo {
+        margin-left: 5vw;
+    }
+
+    .header__
+
+    .header__nav {
+        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        margin-right: 5vw;
+    }
+
+    .header__nav-item {
+        margin: 0 15px;
+    }
+
+    .header__nav-link {
+        font-size: var(--font-size-medium);
+    }
+
+    .header__nav-checkbox-menu,
+    .header__nav-menu-button {
+        display: none;
+    }
+
+    .header__logo-img {
+        width: 40px;
+    }
+
+    .header__logo-text {
+        font-size: var(--font-size-big);
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media screen and (min-width: 1024px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .header__link-logo {
+        margin-left: 7vw;
+    }
+
+    .header__nav-list {
+        margin-right: 7vw;
+    }
+
+    .header__nav-item {
+        margin: 0 20px;
+    }
+
+    .header__nav-link {
+        font-size: var(--font-size-big);
+    }
+
+    .header__logo-img {
+        width: 45px;
+    }
+
+    .header__logo-text {
+        font-size: var(--font-size-xbig);
+    }
+}

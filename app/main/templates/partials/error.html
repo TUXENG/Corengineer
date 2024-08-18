@@ -1,0 +1,12 @@
+
+<h1>An Error Occurred</h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class="error-message">
+    {% for category, message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+<a href="{{ url_for('home') }}">Go back to home</a>

@@ -1,8 +1,5 @@
 {% extends 'base.html' %} {% block title %} Inicio - CorEngineer {% endblock %}
-{%block headblock %}
-<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
-<link rel="stylesheet" href="{{url_for('static', filename='css/card.css')}}">
-{% endblock %} {% block contentBlock %}
+{% block contentBlock %}
 <div class="index">
   <div class="index__background"></div>
   <div class="index__container">
@@ -10,7 +7,7 @@
       <div class="welcome__content">
         <div class="welcome__img-container">
           <img 
-            src="{{url_for('static', filename='img/logo/logo_inskape.svg')}}" 
+            src="{{url_for('static', filename='img/logo/logo.svg')}}" 
             alt="CorEngineer's logo" 
             class="welcome__img">
         </div>
@@ -29,7 +26,7 @@
     <div class="info" id="info">
       <div class="info__img-container" >
         <img 
-          src="{{url_for('static', filename='img/logo/logo_inskape.svg')}}" 
+          src="{{url_for('static', filename='img/logo/logo.svg')}}" 
           alt="information picture" 
           class="info__img"
         >
@@ -57,8 +54,8 @@
     
     <div class="cards">
       <div class="grid">
-        {% for card in cards %}
-          {% include 'card.html' %}
+        {% for course in courses %}
+          {% include 'cards/course_card.html' %}
         {% endfor %}
       </div>
     </div>
