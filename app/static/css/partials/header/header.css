@@ -139,7 +139,7 @@
 }
 
 .header__nav-link.active .header__nav-item-ico{
-    color: var(--accent-color);
+    color: var(--background-color);
 }
 
 .header__nav-item-text{
