@@ -126,6 +126,7 @@
     align-items: center;
     color: var(--primary-text);
     text-decoration: none;
+    width: auto;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -138,7 +139,7 @@
 }
 
 .header__nav-link.active .header__nav-item-ico{
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .header__nav-item-text{

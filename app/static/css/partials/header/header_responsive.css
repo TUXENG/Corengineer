@@ -1,54 +1,104 @@
 /* Estilos para pantallas medianas (tabletas) */
 @media screen and (min-width: 768px) {
     .header {
-        padding: 15px 30px;
+        background-color: transparent;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        transform: translateY(0);
+        transition: 
+            opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+            transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+    
+    .header.hidden{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
 
     .header__link-logo {
-        margin-left: 5vw;
+        position: absolute;
     }
 
-    .header__
+    .header__logo-text{
+        display: none;
+    }
 
     .header__nav {
-        display: flex;
         position: static;
-        height: auto;
-        width: auto;
-        background-color: transparent;
-    }
-
-    .header__nav-list {
+        display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        padding: 0;
-        margin-right: 5vw;
+        min-width: 500px;
+        width: 80%;
+        max-width: 700px;
+        height: 70px;
+        border-radius: 8px;
+        background: var(--background-color);
+        background: -webkit-linear-gradient(
+            to right, 
+            var(--background-color),
+            var(--primary-color), 
+            var(--background-color));
+        background: linear-gradient(
+            to right, 
+            var(--secondary-text),
+            var(--primary-color), 
+            var(--secondary-text));
+        margin: auto;
     }
 
-    .header__nav-item {
-        margin: 0 15px;
-    }
-
-    .header__nav-link {
-        font-size: var(--font-size-medium);
-    }
-
-    .header__nav-checkbox-menu,
     .header__nav-menu-button {
         display: none;
     }
 
-    .header__logo-img {
-        width: 40px;
+    .header__nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        padding: 0;
+        width: auto;
+        height: auto;
+        background-color: transparent;
     }
 
-    .header__logo-text {
-        font-size: var(--font-size-big);
+    .header__nav-item {
+        border: none;
+        margin: auto;
+        margin: var(--margin-big);
     }
+
+    .header__nav-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 60px;
+        margin: auto;
+        
+    }
+
+
+    .header__nav-link:hover .header__nav-item-text {
+        display: block;
+    }
+
+    .header__nav-item-text {
+        display: none;
+    }
+
+    .header__nav-item-ico {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+
 }
 
 /* Estilos para pantallas grandes (escritorio) */
@@ -57,27 +107,5 @@
         padding: 20px 40px;
     }
 
-    .header__link-logo {
-        margin-left: 7vw;
-    }
-
-    .header__nav-list {
-        margin-right: 7vw;
-    }
-
-    .header__nav-item {
-        margin: 0 20px;
-    }
-
-    .header__nav-link {
-        font-size: var(--font-size-big);
-    }
-
-    .header__logo-img {
-        width: 45px;
-    }
-
-    .header__logo-text {
-        font-size: var(--font-size-xbig);
-    }
+   
 }
