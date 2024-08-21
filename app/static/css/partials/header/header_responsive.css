@@ -35,17 +35,7 @@
         max-width: 700px;
         height: 70px;
         border-radius: 8px;
-        background: var(--background-color);
-        background: -webkit-linear-gradient(
-            to right, 
-            var(--background-color),
-            var(--primary-color), 
-            var(--background-color));
-        background: linear-gradient(
-            to right, 
-            var(--secondary-text),
-            var(--primary-color), 
-            var(--secondary-text));
+        background: var(--secondary-text);
         margin: auto;
     }
 

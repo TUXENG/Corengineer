@@ -96,3 +96,31 @@ profile_scheme = {
     },
     "required": ["profiles"]
 }
+
+welcome_scheme = {
+    "type": "object",
+    "properties": {
+        "welcome": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image_bg": {"type": "string"},
+                    "alt_bg": {"type": "string"},
+                    "image_logo": {"type": "string"},
+                    "alt_logo": {"type": "string"},
+                    "description": {"type": "string"}
+                },
+                "required": 
+                [
+                    "image_bg", 
+                    "alt_bg", 
+                    "image_logo", 
+                    "alt_logo", 
+                    "description"
+                ]
+            }
+        }
+    },
+    "required": ["welcome"]
+}

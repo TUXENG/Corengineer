@@ -1,16 +1,16 @@
 import json
 import jsonschema
 from jsonschema import validate
-from .scheme import *
+from .scheme import service_scheme, course_scheme, profile_scheme, welcome_scheme
 
 
 def load_json(file_path):
     """Carga un archivo JSON desde el disco."""
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding="utf-8") as file:
             return json.load(file)
     except Exception as e:
-        raise Exception(f"Error loading JSON file: {e}")
+        raise ValueError("Error loading JSON file: ") from e
 
 def validate_json(schema, data):
     """Valida los datos JSON contra el esquema proporcionado."""
@@ -39,3 +39,7 @@ def validate_service_json(file_path):
 def validate_profile_json(file_path):
     """Valida el archivo JSON de perfiles."""
     return validate_and_load_json(file_path, profile_scheme)
+
+def validate_welcome_json(file_path):
+    """Valida el archivo JSON de welcome."""
+    return validate_and_load_json(file_path, welcome_scheme)

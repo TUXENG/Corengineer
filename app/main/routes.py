@@ -1,7 +1,7 @@
 """ Importaciones """
 import os
 from flask import render_template, redirect, url_for, flash, Blueprint
-from app.scripts.validate_scheme import validate_course_json
+from app.scripts.validate_scheme import validate_course_json, validate_welcome_json
 from app.scripts.validate_scheme import validate_service_json, validate_profile_json
 
 bp = Blueprint('main', __name__, template_folder='templates')
@@ -15,12 +15,20 @@ def home():
     Si hay un error en la validación, redirige a una página de error.
     De lo contrario, renderiza la página principal con los datos de los cursos.
     """
+    welcome_path = os.path.join(bp.root_path, "..", 'data/json/welcome.json')
+    welcome, error_welcome = validate_welcome_json(welcome_path)
     courses_path = os.path.join(bp.root_path, '..' ,'data/json/course_card.json')
     courses, error_course = validate_course_json(courses_path)
+
+    if error_welcome:
+        flash(f"Error validating welcome JSON: {error_welcome}", 'error')
+        return redirect(url_for('main.error'))
     if error_course:
         flash(f"Error validating courses JSON: {error_course}", 'error')
         return redirect(url_for('main.error'))
-    return render_template('index.html', courses=courses['courses'])
+    return render_template('index.html',
+                           welcome=welcome['welcome'], 
+                           courses=courses['courses'])
 
 @bp.route('/services')
 def services():
