@@ -1,22 +1,35 @@
 {% extends 'base.html' %} {% block title %} Inicio - CorEngineer {% endblock %}
 {% block contentBlock %}
+
 <div class="index">
-  <div class="index__background"></div>
   <div class="index__container">
     <div class="welcome">
+      {% for wel in welcome %}
       <div class="welcome__content">
+        <div class="welcome__bg">
+          <div class="welcome__bg-container">
+            <img 
+            src="{{url_for('static', filename=wel.image_bg)}}" 
+            alt="{{wel.alt_bg}}" 
+            class="welcome_bg-img">
+          </div>
+        </div>
         <div class="welcome__img-container">
           <img 
-            src="{{url_for('static', filename=welcome.image_logo)}}" 
-            alt="{{welcome.alt_logo}}" 
+            src="{{url_for('static', filename=wel.image_logo)}}" 
+            alt="{{wel.alt_logo}}" 
             class="welcome__img">
         </div>
+        
         <h1 class="welcome__corengineer">CORENGINEER</h1>
         <h2 class="welcome__slogan">THE CORE OF INNOVATION</h3>
-        <p class="welcome__description">{{welcome.description}}
+        <p class="welcome__description">{{wel.description}}
         </p>
-        <a href="#info" class="welcome__see-more button" role="button">See more</a>
+        <a href="#info" class="welcome__button" role="button">
+          <i class="welcome__button-ico fa-solid fa-arrow-down-long"></i>
+        </a>
       </div>
+      {% endfor %}
     </div>
     <div class="info" id="info">
       <div class="info__img-container" >
