@@ -1,16 +1,13 @@
 .index{
     display: flex;
-    padding: 0;
-    margin: 0;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .index__background {
-    background-image:
-        linear-gradient(var(--divider-color), #0006, var(--divider-color)),
-        url('../img/backgroud/circuito.jpeg');
+   
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -33,16 +30,34 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
+    margin-top:var(--margin-big);
     position: relative;
-    z-index: 1;
-
+    z-index: var(--two-level);
     container-name: welcome;
     container-type: inline-size;
 }
 
+.welcome__bg {
+    position: absolute;
+    z-index: var(--one-level);
+    opacity: 0.5;
+    background: linear-gradient(to right top, 
+                var(--background-color), 
+                var(--accent-color)) ;
+    margin: auto;
+    padding: var(--padding-xsuper);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter:blur(5px);
+}
 
+.welcome__bg-container{
+    display: none;
+}
 .welcome__content{
     position: relative;
+    z-index: var(--two-level);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,15 +65,13 @@
     min-width: 240px;
     max-width: 600px;
     margin: auto;
-    margin-top: calc(12vh + var(--header-height)); 
     margin-bottom: 20px;
     filter: drop-shadow(2px 2px 5px var(--secondary-text));
     
 }
 
 .welcome__img{
-    max-width: 400px;
-    width: 50vw;
+    width: 100%;
 }
 
 .welcome__corengineer{
@@ -73,7 +86,7 @@
 .welcome__slogan{
     font-family: Montserrat, 'Nunito';
     font-size: 5vw;
-    color: var(--primary-text);
+    color: white;
     text-shadow: 2px 2px 5px var(--secondary-text);
 }
 
@@ -85,15 +98,23 @@
     margin: 20px;
 }
 
-.welcome__see-more{
-    color: var(--divider-color);
-    font-size: 0.9rem;
-    font-weight: bold;
-    background-color: var(--primary-color);
-    padding: 5px 20px;
-    border: 1px solid var(--primary-color);
+.welcome__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    background-color: var(--secondary-text);
+    padding: var(--padding-big);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.welcome__button:hover{
+    opacity: 1;
+}
 .info{
     display: flex;
     flex-direction: row;
@@ -158,7 +179,7 @@
 }
 
 .info__see-more{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 2px 5px;
     color: var(--divider-color);
     border: none;
