@@ -16,50 +16,54 @@
     <nav class="header__nav">
         <ul class="header__nav-list">
             <li class="header__nav-item">
-                <a href="{{url_for('main.home')}}" class="header__nav-link {% if request.endpoint == 'main.home' %}active{% endif %}">
+                <a href="{{url_for('main.home')}}" 
+                class="header__nav-link {% if request.endpoint == 'main.home' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-solid fa-house"></i>
                     <h5 class="header__nav-item-text">Home</h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.services')}}" class="header__nav-link {% if request.endpoint == 'main.services' %}active{% endif %}">
+                <a href="{{url_for('main.services')}}" 
+                class="header__nav-link {% if request.endpoint == 'main.services' %}active{% endif %}">
                     <i class="header__nav-item-ico fas fa-cogs"></i>
                     <h5 class="header__nav-item-text">Services</h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.portfolio')}}" class="header__nav-link {% if request.endpoint == 'main.portfolio' %}active{% endif %}">
+                <a href="{{url_for('main.portfolio')}}" 
+                class="header__nav-link {% if request.endpoint == 'main.portfolio' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-sharp fa-solid fa-briefcase"></i>
                     <h5 class="header__nav-item-text">Portfolio </h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.team')}}" class="header__nav-link">
+                <a href="{{url_for('main.team')}}" 
+                class="header__nav-link {% if request.endpoint == 'main.team' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-solid fa-user-group"></i>
                     <h5 class="header__nav-item-text">Team</h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.contact')}}" class="header__nav-link">
+                <a href="{{url_for('main.contact')}}" 
+                class="header__nav-link {% if request.endpoint == 'main.contact' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-solid fa-address-book"></i>
                     <h5 class="header__nav-item-text">Contact</h5>
                 </a>
             </li>
             <li class="header__nav-item">
-                <a href="{{url_for('main.about')}}" class="header__nav-link">
+                <a href="{{url_for('main.about')}}" 
+                class="header__nav-link {% if request.endpoint == 'main.about' %}active{% endif %}">
                     <i class="header__nav-item-ico fa-solid fa-circle-info"></i>
                     <h5 class="header__nav-item-text">About </h5>
                 </a>
             </li>
-
-            <li class="header__nav-item">
-                <a href="{{url_for('auth.login')}}"
-                    class="header__nav-link {% if request.endpoint == 'auth.login' %}active{% endif %}">
-                    <i class="header__nav-item-ico fa-solid fa-sign-in-alt"></i>
-                    <h5 class="header__nav-item-text">Login</h5>
-                </a>
-            </li>
         </ul>
-
+        <div class="login__button">
+            <a href="{{url_for('auth.login')}}"
+                class="login__button-link {% if request.endpoint == 'auth.login' %}active{% endif %}">
+                <i class="login__button-ico  fa-solid fa-sign-in-alt"></i>
+                <h5 class="login__button-text">Login</h5>
+            </a>
+        </div>
     </nav>
 </header>

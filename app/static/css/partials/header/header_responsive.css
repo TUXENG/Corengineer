@@ -1,28 +1,27 @@
-/* Estilos para pantallas medianas (tabletas) */
-@media screen and (min-width: 768px) {
+/* Estilos para pantallas grandes (escritorio) */
+@media screen and (min-width: 1250px) {
     .header {
-        background-color: transparent;
+        background-color: var(--secondary-text);
         flex-direction: row;
         margin: 0;
         padding: 0;
         opacity: 1;
         transform: translateY(0);
-        transition: 
-            opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+        transition:
+            opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
             transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-    
-    .header.hidden{
+
+    .header.hidden {
         opacity: 0;
         transform: translateY(-100%);
     }
-
 
     .header__link-logo {
         position: absolute;
     }
 
-    .header__logo-text{
+    .header__logo-text {
         display: none;
     }
 
@@ -30,9 +29,9 @@
         position: static;
         display: flex;
         flex-direction: row;
-        min-width: 500px;
+        min-width: 650px;
         width: 80%;
-        max-width: 700px;
+        max-width: 1150px;
         height: 70px;
         border-radius: 8px;
         background: var(--secondary-text);
@@ -50,34 +49,34 @@
         margin: auto;
         padding: 0;
         width: auto;
-        height: auto;
+        height: 100%;
         background-color: transparent;
     }
 
     .header__nav-item {
+        display: flex;
         border: none;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
         margin: auto;
         margin: var(--margin-big);
     }
 
     .header__nav-link {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 60px;
         margin: auto;
-        
-    }
-
-
-    .header__nav-link:hover .header__nav-item-text {
-        display: block;
+        margin-inline: var(--margin-xbig);
     }
 
     .header__nav-item-text {
-        display: none;
+        display: block;
+        margin: 5px;
     }
 
     .header__nav-item-ico {
@@ -88,14 +87,16 @@
         margin: auto;
     }
 
-
-}
-
-/* Estilos para pantallas grandes (escritorio) */
-@media screen and (min-width: 1024px) {
-    .header {
-        padding: 20px 40px;
+    .login__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: var(--ten-level);
+        top: 50%;
+        left: 93vw;
+        width: 150px;
+        height: 80%;
+        margin: auto;  
     }
-
-   
 }
