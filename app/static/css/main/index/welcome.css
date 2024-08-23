@@ -29,25 +29,29 @@
     position: absolute;
     top: -50px;
     z-index: var(--one-level);
-    opacity: 0.2;
-    background: linear-gradient(to right,
-            var(--accent-color),
-            var(--primary-color));
+    opacity: 0.3;
+    background-image: 
+        linear-gradient(to right,
+                #f00000b2,
+                #9fef00da),
+        url('../../../img/bg/bg_welcome.webp');
+    background-size: cover;
+    background-position: center;
     margin: auto;
     padding: var(--padding-xsuper);
     width: 100vw;
-    height: 120%;
+    height: 110%;
     border-radius: 10px;
-    filter: blur(1px);
+    filter: blur(2px);
 }
 
 .welcome__bg-container {
     display: none;
-    width: 100vw;
+    width: 100%;
 }
 
 .welcome__bg-img {
-    width: 100%;
+    display: none;
 }
 
 

@@ -1,7 +1,7 @@
 {
     "welcome": [
         {
-            "image_bg": "img/bg/welcome_bg.svg",
+            "image_bg": "img/bg/bg_welcome.webp",
             "alt_bg": "background welcome image",
             "image_logo": "img/logo/logo.svg",
             "alt_logo": "CorEngineer logo",

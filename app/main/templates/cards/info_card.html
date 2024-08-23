@@ -1,0 +1,18 @@
+<div class="info__grid-item">
+    <div class="info__grid-item-card">
+        <div class="info__img-container">
+            <img 
+            src="{{ url_for('static', filename=info.image) }}" 
+            alt="{{ info.alt }}" 
+            class="info__img" />
+        </div>
+        <div class="info__content">
+            <h3 class="info__content-title">{{ info.title }}</h3>
+            <p class="info__content-description">{{ info.description }}</p>
+            <a 
+            href="{{info.url}}" 
+            class="info__content-button" 
+            role="button">ver más</a>
+        </div>
+    </div>
+</div>

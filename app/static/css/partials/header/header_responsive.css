@@ -58,9 +58,10 @@
         border: none;
         justify-content: center;
         align-items: center;
+        width: 150px;
         height: 100%;
         margin: auto;
-        margin: var(--margin-big);
+        margin: var(--margin-mid);
     }
 
     .header__nav-link {
@@ -71,7 +72,7 @@
         text-align: center;
         width: 60px;
         margin: auto;
-        margin-inline: var(--margin-xbig);
+        margin-inline: var(--margin-big);
     }
 
     .header__nav-item-text {

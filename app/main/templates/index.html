@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block title %} Inicio - CorEngineer {% endblock %}
 {% block contentBlock %}
 
-<div class="index">
+<section class="index">
   <div class="index__container">
     <div class="welcome">
       {% for wel in welcome %}
@@ -31,28 +31,15 @@
       </div>
       {% endfor %}
     </div>
-    <div class="info" id="info">
-      <div class="info__card">
+    <h3 class="title-section">INFORMACIÓN</h3>
+    <div class="info__cards" id="info">
+      <div class="info__grid">
         {% for info in infos %}
-        <div class="info__img-container" >
-          <img 
-            src="{{url_for('static', filename=info.image)}}" 
-            alt="{{info.alt}}" 
-            class="info__img"
-          >
-        </div>
-        <div class="info__text-container">
-          <h3 class="info__title">{{info.title}}</h3>
-          <p class="info__description">{{info.description}}</p>
-          <a 
-            href="{{info.url}}" class="info__see-more button" 
-            role="button">ir a
-          </a>
-        </div>
+          {% include 'cards/info_card.html' %}
         {% endfor %}
       </div>
-      <div class="cards">
-        <div class="grid">
+      <div class="course__cards">
+        <div class="course__grid">
           {% for course in courses %}
             {% include 'cards/course_card.html' %}
           {% endfor %}
@@ -60,5 +47,6 @@
       </div>
     </div>
   </div>
-</div>
+</section>
+
 {% endblock %}

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--primary-text);
     width: 100%;
     margin: auto;
@@ -41,7 +41,7 @@
 
 .header__logo-text {
     font-family: 'Nunito', sans-serif;
-    font-size: var(--font-size-xbig);
+    font-size: var(--font-size-mid);
     font-weight: bold;
 }
 
@@ -54,7 +54,7 @@
     left: 100vw;
     height: 100vh;
     width: 100vw;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -72,7 +72,7 @@
 }
 
 .header__nav-button-ico {
-    font-size: var(--font-size-xbig);
+    font-size: var(--font-size-mid);
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -145,7 +145,7 @@
 
 .header__nav-item-text{
     font-family: var(--font-family-nunito);
-    font-size: var(--font-size-big);
+    font-size: var(--font-size-mid);
 }
 
 .header__nav-item-text:hover {
@@ -177,10 +177,10 @@
 }
 
 .login__button-ico {
-    color: var(--background-color);
+    color: var(--bg-color);
     margin-inline: var(--margin-big);
 }
 
 .login__button-text {
-    color: var(--background-color);
+    color: var(--bg-color);
 }

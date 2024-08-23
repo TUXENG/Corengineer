@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --background-color: #212529;
-    --background-color-opacity: #21252922;
+    --bg-color: #212529;
+    --bg-color-opacity: #21252922;
+    --card-bg-color: #252b31; 
     --primary-color: #9fef00bf;
     --secondary-color: #9fef00;
     --accent-color: #f00000;
-    --light-primary-color: #26a69a;
-    --light-secondary-color: #ff8a65;
-    --light-accent-color: #4dd0e1;
-    --dark-primary-color: #00796b;
-    --dark-secondary-color: #e64a19;
-    --dark-accent-color: #00838f;
     --primary-text: #e0e0e0;
     --secondary-text: #757575;
+    --primary-title: #fff;
+    --secondary-title: #a4b1cd;
     --divider-color: #22272c;
     --divider-color-opacity: #282e3555;
 
@@ -22,20 +19,24 @@
     --font-family-nunito: 'Nunito', sans-serif;
     --font-family-montserrat: 'Montserrat', sans-serif;
 
-    --font-size-xsmall: 8px;
-    --font-size-small: 12px;
-    --font-size-mid: 16px;
-    --font-size-big: 20px;
-    --font-size-xbig: 24px;
+    --font-size-xsmall: .5em;
+    --font-size-small: 1em;
+    --font-size-mid: 1.5em;
+    --font-size-big: 2em;
+    --font-size-xbig: 2.5em;
+    --font-size-super: 3.0em;
+    --font-size-xsuper: 3.5em;
 
     --margin-xsmall: 3px;
-    --margin-small: 5px,
+    --margin-small: 5px;
     --margin-mid: 8px;
     --margin-big: 13px;
     --margin-xbig: 21px;
+    --margin-super: 34px;
+    --margin-xsuper: 55px;
 
     --padding-xsmall: 2px;
-    --padding-small: 3px,
+    --padding-small: 3px;
     --padding-mid: 5px;
     --padding-big: 7px;
     --padding-xbig: 11px;
@@ -66,11 +67,11 @@ html {
     padding: 0;
     box-sizing: border-box;
     color: var(--primary-text);
-    font-size: var(--font-size-mid);
+    font-size: var(--font-size-small);
     font-family: var(--font-family-montserrat);
     text-decoration: none;
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
 }

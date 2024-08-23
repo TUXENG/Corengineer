@@ -25,18 +25,38 @@
     align-items: center;
 }
 
-.cards{
-    position: relative;
-    z-index: 2;
-    margin: 10px;
+.title-section{
+    display: none;
+    color: var(--primary-title);
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-xsuper);
+    font-weight: bold;
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 25px;
 }
 
-.grid{
+.info__cards {
+    position: relative;
+    z-index: var(--three-level);
+    margin: var(--margin-big);
+    margin-top: 100px;
+}
+
+.info__grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, 1fr);
     gap: 8px;
 }
 
-.button{
-    font-weight: bold;
+.course__cards{
+    position: relative;
+    z-index: var(--three-level);
+    margin: var(--margin-big);
+}
+
+.course__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 8px;
 }
