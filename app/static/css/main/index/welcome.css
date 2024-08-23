@@ -1,0 +1,174 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: var(--margin-big);
+    position: relative;
+    z-index: var(--two-level);
+    container-name: welcome;
+    container-type: inline-size;
+}
+
+.welcome__content {
+    position: relative;
+    z-index: var(--two-level);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 240px;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 5px var(--secondary-text));
+
+}
+
+.welcome__bg {
+    position: absolute;
+    top: -50px;
+    z-index: var(--one-level);
+    opacity: 0.2;
+    background: linear-gradient(to right,
+            var(--accent-color),
+            var(--primary-color));
+    margin: auto;
+    padding: var(--padding-xsuper);
+    width: 100vw;
+    height: 120%;
+    border-radius: 10px;
+    filter: blur(1px);
+}
+
+.welcome__bg-container {
+    display: none;
+    width: 100vw;
+}
+
+.welcome__bg-img {
+    width: 100%;
+}
+
+
+.welcome__img {
+    min-width: 300px;
+    width: 70vw;
+    max-width: 400px;
+}
+
+.welcome__corengineer {
+    font-family: Montserrat, 'Nunito';
+    font-size: 10vw;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px var(--secondary-text);
+
+}
+
+.welcome__slogan {
+    font-family: Montserrat, 'Nunito';
+    font-size: 1.0em;
+    color: white;
+    text-shadow: 2px 2px 5px var(--secondary-text);
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+}
+
+.welcome__slogan-spam-typing {
+    color: var(--light-primary-color);
+    font-size: 1.0em;
+    padding: var(--padding-big);
+    border-radius: 4px;
+}
+
+.welcome__slogan-typing {
+    animation:
+        animation_typing 2.5s steps(40),
+        transparent_typing .5s step-end 50 alternate;
+}
+
+.welcome__description {
+    font-family: Montserrat, 'Nunito';
+    font-size: 3vw;
+    color: var(--primary-text);
+    text-align: justify;
+    margin: 20px;
+}
+
+.welcome__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    background-color: var(--secondary-text);
+    padding: var(--padding-big);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.welcome__button:hover {
+    opacity: .8;
+    filter: drop-shadow(1px 1px 10px var(--accent-color));
+}
+
+@container welcome (min-width: 620px) {
+    .welcome__content {
+        min-width: 600px;
+        max-width: 900px;
+    }
+
+}
+
+@container welcome (min-width: 920px) {
+    .welcome__content {
+        min-width: 900px;
+        max-width: 1250px;
+    }
+
+    .welcome__corengineer {
+        font-size: 100px;
+    }
+
+    .welcome__slogan {
+        font-size: 50px;
+    }
+
+    .welcome__description {
+        font-size: 30px;
+        margin: 20px;
+    }
+
+}
+
+@container welcome (min-width: 1250px) {
+    .welcome__content {
+        max-width: 1250px;
+    }
+
+}
+
+@keyframes animation_typing {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 45%;
+    }
+
+}
+
+@keyframes transparent_typing {
+    50% {
+        border-color: transparent;
+    }
+}

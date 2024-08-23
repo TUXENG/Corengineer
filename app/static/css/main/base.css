@@ -56,6 +56,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+    transition: scroll-behavior .5s cubic-bezier(.03, .7, .88, .28);
+}
 
 * {
     margin: 0;
