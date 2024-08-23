@@ -117,10 +117,38 @@ welcome_scheme = {
                     "alt_bg", 
                     "image_logo", 
                     "alt_logo", 
-                    "description"
+                    "description"                    
                 ]
             }
         }
     },
     "required": ["welcome"]
+}
+
+info_scheme = {
+    "type": "object",
+    "properties": {
+        "info": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image": {"type": "string"},
+                    "alt": {"type": "string"},
+                    "title": {"type": "string"},
+                    "description": {"type": "string"},
+                    "url": {"type": "string"}
+                },
+                "required": 
+                [
+                    "image", 
+                    "alt", 
+                    "title",
+                    "description",
+                    "url"
+                ]
+            }
+        }
+    },
+    "required": ["info"]
 }

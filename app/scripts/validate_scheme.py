@@ -1,7 +1,8 @@
+"""Script de validación de scheme"""
 import json
 import jsonschema
 from jsonschema import validate
-from .scheme import service_scheme, course_scheme, profile_scheme, welcome_scheme
+from .scheme import service_scheme, course_scheme, profile_scheme, welcome_scheme, info_scheme
 
 
 def load_json(file_path):
@@ -43,3 +44,7 @@ def validate_profile_json(file_path):
 def validate_welcome_json(file_path):
     """Valida el archivo JSON de welcome."""
     return validate_and_load_json(file_path, welcome_scheme)
+
+def validate_info_json(file_path):
+    """Valida el archivo JSON de info"""
+    return validate_and_load_json(file_path, info_scheme)

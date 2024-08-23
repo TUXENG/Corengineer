@@ -2,7 +2,7 @@
 import os
 from flask import render_template, redirect, url_for, flash, Blueprint
 from app.scripts.validate_scheme import validate_course_json, validate_welcome_json
-from app.scripts.validate_scheme import validate_service_json, validate_profile_json
+from app.scripts.validate_scheme import validate_service_json, validate_profile_json, validate_info_json
 
 bp = Blueprint('main', __name__, template_folder='templates')
 
@@ -17,17 +17,23 @@ def home():
     """
     welcome_path = os.path.join(bp.root_path, "..", 'data/json/welcome.json')
     welcome, error_welcome = validate_welcome_json(welcome_path)
+    info_path = os.path.join(bp.root_path, '..', 'data/json/info.json')
+    infos, error_info = validate_info_json(info_path)
     courses_path = os.path.join(bp.root_path, '..' ,'data/json/course_card.json')
     courses, error_course = validate_course_json(courses_path)
 
     if error_welcome:
         flash(f"Error validating welcome JSON: {error_welcome}", 'error')
         return redirect(url_for('main.error'))
+    if error_info:
+        flash(f"Error validating info JSON: {error_info}", 'error')
+        return redirect(url_for('main.error'))
     if error_course:
         flash(f"Error validating courses JSON: {error_course}", 'error')
         return redirect(url_for('main.error'))
     return render_template('index.html',
-                           welcome=welcome['welcome'], 
+                           welcome=welcome['welcome'],
+                           infos=infos['info'],
                            courses=courses['courses'])
 
 @bp.route('/services')
@@ -103,4 +109,4 @@ def error():
     Renderiza una página genérica de error cuando ocurre algún problema 
     en la aplicación.
     """
-    return render_template('error.html')
+    return render_template('partials/error.html')
