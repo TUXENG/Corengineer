@@ -1,84 +1,50 @@
-.services {
+.services{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     text-align: justify;
     padding: 0;
     margin: 0;
+    gap: 16px;
+    container: service;
+    container-type: inline-size;
+}
+
+.nav-service__container {
+    position: sticky;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    z-index: var(--six-level);
+}
+
+.main-service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: var(--margin-big); 
+    margin-left: var(--margin-xsuper);
+    text-decoration: none;
+
 }
 
 .article-service{
     display: none;
 }
 
-.nav-service {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 60px;
-    background-color: var(--divider-color);
-    z-index: 100;
-}
-
-.nav-service__item-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--primary-color);
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.nav-service__item-link:hover {
-    background-color: var(--primary-text);
-}
-
-
-.text-nav{
-    display: none;
-}
-
-.body-service{
-    margin-inline: 70px;
-    padding: 5px;
-    flex: 1;
-}
-
-.body-service-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.body-service-grid__item:first-child {
-    grid-column: 1 / -1;
-    
-    min-width: 240px;
-    max-width: 600px;
-
-}
-
-.body-service-grid__item:first-child h2{
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.grid-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px;
-}
-
-
-/* Estilos generales para el contenedor de tarjetas */
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+@container service (min-width: 1250px){
+    .main-service{
+        margin: var(--margin-xsuper);
+    }
+    .article-service{
+        max-width: 300px;
+        margin: var(--margin-big);
+        display: flex;
+    }
 }

@@ -1,0 +1,47 @@
+.main-service-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    row-gap: 16px;
+}
+
+.welcome-service{
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-xsuper);
+    border-radius: 8px;
+
+    background-color: var(--card-bg-color2);
+}
+
+.welcome-service__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-block: var(--margin-big);
+    gap: 20px;
+}
+
+.welcome-icon-service{
+    color: var(--accent-color);
+    padding: var(--padding-xsuper);
+    border-radius: 6px;
+    background-image: radial-gradient(transparent, var(--accent-color2));
+}
+
+.welcome-title-service{
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-xbig);
+    text-align: left;
+    font-weight: bold;
+}
+
+.welcome-text-service{
+    color: var(--secondary-title);
+    font-size: var(--font-size-mid);
+    margin: var(--margin-big);
+    padding: var(--padding-big);
+
+}
+
+

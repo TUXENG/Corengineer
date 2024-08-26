@@ -1,0 +1,16 @@
+.service__grid-item:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 10px var(--primary-color);
+}
+
+.service__grid-item-card {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin-mid);
+    padding: var(--padding-mid);
+    border-radius: 8px;
+    background-color: var(--card-bg-color2);
+    box-shadow: 1px 1px 10px var(--primary-text);
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+        box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

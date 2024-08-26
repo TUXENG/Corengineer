@@ -1,14 +1,14 @@
 {
     "services": [
         {
-            "image": "web_programming.jpg",
+            "image": "img/courses/CSS3_HTML5.svg",
             "alt": "Programación Web",
             "title": "Programación Web",
             "description": "Desarrollo de aplicaciones y sitios web utilizando tecnologías modernas y eficientes.",
             "state": "Disponible",
             "personal": [
-                "Desarrollador Frontend",
-                "Desarrollador Backend",
+                "Frontend Developer",
+                "Backend Developer",
                 "Full Stack Developer"
             ]
         },
