@@ -1,21 +1,25 @@
-<div class="grid-item">
-    <div class="card">
-        <div class="card__image-container">
-            <img src="{{ url_for('static', filename=profile.image) }}" alt="{{ profile.alt }}" class="card__image" />
+<div class="profile__grid-item">
+    <div class="profile__grid-item-card">
+        <div class="profile__img-container">
+            <img 
+            src="{{ url_for('static', filename=profile.image) }}" 
+            alt="{{ profile.alt }}" 
+            class="profile__img"
+             />
         </div>
-        <div class="card__content">
-            <h3 class="card__name">{{ profile.name }}</h3>
-            <h4 class="card__job-title">{{ profile.job_title }}</h4>
-            <a href="{{ profile.email }}" class="card__email">
+        <div class="profile__content">
+            <h3 class="profile__name">{{ profile.name }}</h3>
+            <h4 class="profile__job-title">{{ profile.job_title }}</h4>
+            <a href="{{ profile.email }}" class="profile__email">
                 <i class="fab fa-envelope"></i>
             </a>
-            <h5 class="card__cel">
+            <h5 class="profile__cel">
                 {{ profile.cel }}
                 <i class="fab fa-phone"></i>
             </h5>
-            <p class="card__description">{{ profile.description }}</p>
+            <p class="profile__description">{{ profile.description }}</p>
 
-            <a href="{{ profile.linkedin }}" class="card__link linkedin">
+            <a href="{{ profile.linkedin }}" class="profile__link linkedin">
                 <i class="fab fa-linkedin"></i>
             </a>
             <a href="{{ profile.github }}" class="card__link github">

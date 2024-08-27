@@ -1,10 +1,10 @@
 {
     "profiles": [
         {
-            "image": "profile_image.jpg",
+            "image": "img/logo/logo.svg",
             "alt": "Perfil de Miguel",
             "name": "Miguel Hernández",
-            "job_title": "Estudiante de Ingeniería Electrónica",
+            "job_title": "Estudiante de Ing. Electrónica",
             "email": "miguel@example.com",  
             "cel": "3114251343",         
             "description": "Soy estudiante de Ingeniería Electrónica en la Universidad de Antioquia (UdeA), con experiencia en programación web full stack, programación móvil en Kotlin y programación en microcontroladores para sistemas embebidos. Trabajo como laboratorista en Teslab Electronics, una empresa de ingeniería industrial.",

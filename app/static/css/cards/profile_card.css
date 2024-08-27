@@ -1,0 +1,42 @@
+.profile__grid-item{
+    border: 1px solid var(--secondary-title);
+    border-radius: 6px;
+    padding: var(--padding-small);
+}
+
+.profile__grid-item-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    margin: var(--margin-mid); 
+}
+
+.profile__img-container{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.profile__img{
+    width: 100%;
+    padding: var(--padding-mid),
+             var(--padding-big), 
+             var(--padding-mid),
+             var(--padding-mid);
+    border-radius: 50%;
+}
+
+.profile__content{
+    padding: var(--padding-big);
+}
+
+.profile__name{
+    font-size: var(--font-size-mid);
+}
+
+.profile__job-title{
+    text-align: left;
+    font-size: var(--font-size-small);
+    font-weight: lighter;
+}

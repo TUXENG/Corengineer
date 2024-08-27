@@ -35,7 +35,17 @@
 }
 
 .article-service{
+    position: absolute;
+    position: sticky;
     display: none;
+    flex-direction: column;
+    max-width: 280px;
+    margin-right: var(--margin-xbig);
+    top: 25%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: var(--six-level);
+    margin-bottom: 25%;    
 }
 
 @container service (min-width: 1250px){
@@ -43,8 +53,6 @@
         margin: var(--margin-xsuper);
     }
     .article-service{
-        max-width: 300px;
-        margin: var(--margin-big);
         display: flex;
     }
 }
