@@ -9,15 +9,16 @@
     gap: 16px;
     container: service;
     container-type: inline-size;
+    position: relative;
 }
 
 .nav-service__container {
+    position: absolute;
     position: sticky;
-    top: 50%;
+    top: 50vh;
     left: 0;
+    margin-block: 25vh;
     transform: translateY(-50%);
-    width: auto;
-    height: auto;
     background-color: transparent;
     z-index: var(--six-level);
 }
@@ -28,10 +29,9 @@
     justify-content: center;
     align-items: center;
     text-align: justify;
-    margin: var(--margin-big); 
-    margin-left: var(--margin-xsuper);
     text-decoration: none;
-
+    margin-right:var(--margin-big) ;
+    gap: 8px;
 }
 
 .article-service{

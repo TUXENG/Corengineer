@@ -10,15 +10,16 @@
         <div class="service__content">
             <h3 class="service__title">{{ service.title }}</h3>
             <p class="service__description">{{ service.description }}</p>
-            <p class="service__state">Estado: {{ service.state }}</p>
-            <div class="service__personal">
-                <h4>Personal:</h4> 
-                <ul>
+            <p class="service__state">Estado: <span class="service__state-stage">{{ service.state }}</span></p>
+            <div class="service__staff">
+                <h4 class="service__staff-title">Personal:</h4> 
+                <ul class="service__staff-list">
                     {% for person in service.personal %}
-                        <li>{{ person }}</li>
+                        <li class="service__staff-item">{{ person }}</li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
+        
     </div>
 </div>
