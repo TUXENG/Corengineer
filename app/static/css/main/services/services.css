@@ -30,7 +30,7 @@
     align-items: center;
     text-align: justify;
     text-decoration: none;
-    margin-right:var(--margin-big) ;
+    margin-right:var(--margin-mid) ;
     gap: 8px;
 }
 
@@ -40,12 +40,15 @@
     display: none;
     flex-direction: column;
     max-width: 280px;
-    margin-right: var(--margin-xbig);
     top: 25%;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-25%);
+    transform: translateX(-25%);
     z-index: var(--six-level);
-    margin-bottom: 25%;    
+    margin-bottom: 25%;   
+    margin-right: var(--margin-big);
+    margin-left: var(--margin-small);
+    padding: var(--padding-mid);
 }
 
 @container service (min-width: 1250px){

@@ -1,30 +1,38 @@
 <div class="profile__grid-item">
     <div class="profile__grid-item-card">
-        <div class="profile__img-container">
-            <img 
-            src="{{ url_for('static', filename=profile.image) }}" 
-            alt="{{ profile.alt }}" 
-            class="profile__img"
-             />
+        <div class="profile__head">
+            <div class="profile__img-container">
+                <img 
+                src="{{ url_for('static', filename=profile.image) }}" 
+                alt="{{ profile.alt }}" 
+                class="profile__img"
+                />
+            </div>
+            <h3 class="profile__name">{{ profile.name }}</h3>
         </div>
         <div class="profile__content">
-            <h3 class="profile__name">{{ profile.name }}</h3>
             <h4 class="profile__job-title">{{ profile.job_title }}</h4>
             <a href="{{ profile.email }}" class="profile__email">
-                <i class="fab fa-envelope"></i>
+                <i class="profile-ico fas fa-envelope"></i>{{ profile.email }}
             </a>
-            <h5 class="profile__cel">
-                {{ profile.cel }}
-                <i class="fab fa-phone"></i>
-            </h5>
+            <p class="profile__cel">
+                <i class="profile-ico fas fa-phone"></i>{{ profile.cel }}
+            </p>
             <p class="profile__description">{{ profile.description }}</p>
-
-            <a href="{{ profile.linkedin }}" class="profile__link linkedin">
-                <i class="fab fa-linkedin"></i>
+        </div>
+        <div class="profile__link-container">
+            <a href="{{ profile.linkedin_link }}" class="profile__link linkedin" target="_blank">
+                <i class="profile-ico fab fa-linkedin"></i> {{ profile.linkedin }}
             </a>
-            <a href="{{ profile.github }}" class="card__link github">
-                <i class="fab fa-github"></i>
+            <a href="{{ profile.github_link }}" class="profile__link github" target="_blank">
+                <i class="profile-ico fab fa-github"></i>{{ profile.github }}
             </a>
+            <a href="{{ profile.github_link }}" class="profile__link github" target="_blank">
+                <i class="profile-ico fab fa-instagram"></i>{{ profile.github }}
+            </a>
+            <a href="{{ profile.github_link }}" class="profile__link github" target="_blank">
+                <i class="profile-ico fab fa-twitter"></i>{{ profile.github }}
+            </a>        
         </div>
     </div>
 </div>

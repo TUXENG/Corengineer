@@ -63,11 +63,19 @@
     margin-block: var(--margin-small);
     gap: 8px;
 }
+
+
 .service__state-stage{
     font-weight: lighter;
     font-size: var(--font-size-small);
 }
 
+.service__staff-list {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+}
 
 .service__staff-item{
     list-style: none;
@@ -75,7 +83,6 @@
     font-family: var(--font-family-roboto);
     font-weight: lighter;
     font-size: var(--font-size-mid);
-    margin-block: var(--margin-small);
 }
 
 @container service (min-width: 600px){
