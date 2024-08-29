@@ -46,9 +46,16 @@
 }
 
 .service__description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--secondary-title);
     font-size: var(--font-size-mid);
     margin-block: var(--margin-mid);
+    margin-right: var(--margin-mid);
 }
 
 .service__state, .service__staff-title{
@@ -59,7 +66,7 @@
 
 .service__staff{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-block: var(--margin-small);
     gap: 8px;
 }
@@ -72,7 +79,7 @@
 
 .service__staff-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
     gap: 16px;
 }
@@ -85,7 +92,7 @@
     font-size: var(--font-size-mid);
 }
 
-@container service (min-width: 600px){
+@container service (min-width: 800px){
     .service__grid-item {
         max-width: 1450px;        
     }
