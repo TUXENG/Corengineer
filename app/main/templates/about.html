@@ -1,3 +1,39 @@
-{% extends 'base.html' %} {% block title %}Sobre CorEngineer{% endblock %} {%
-    block content %} {% endblock %}
-    
+{% extends 'base.html' %}
+
+{% block title %}About Us - CorEngineer{% endblock %}
+
+{% block contentBlock %}
+<section class="about">
+    <div class="about__header">
+        <h1>CorEngineer</h1>
+        <p>THE CORE OF INNOVATION</p>
+    </div>
+
+    <div class="about__content">
+        <div class="about__text">
+            <h2>Quiénes Somos</h2>
+            <p>
+                En CorEngineer, somos un equipo apasionado por la tecnología y la innovación, comprometidos con el desarrollo de
+                soluciones que transformen las industrias en Colombia y más allá. Nos especializamos en desarrollo web, creación de
+                aplicaciones móviles, sistemas embebidos, IoT, robótica y electrónica industrial, siempre buscando adaptarnos a las
+                necesidades locales y contribuir al crecimiento tecnológico del país.
+            </p>
+            <h2>Nuestra Misión</h2>
+            <p>
+                Nuestra misión es impulsar la transformación digital en Colombia, ofreciendo soluciones tecnológicas de alta calidad
+                que ayuden a las empresas a ser más competitivas y eficientes. Creemos que la tecnología es un motor para el
+                desarrollo, y trabajamos cada día para que nuestros clientes puedan aprovechar al máximo su potencial.
+            </p>
+            <h2>Nuestra Visión</h2>
+            <p>
+                Aspiramos a ser un referente en servicios tecnológicos en Colombia, reconocidos por nuestra capacidad de innovación,
+                excelencia y compromiso con el progreso del país. Queremos ser parte activa del crecimiento tecnológico y económico
+                de Colombia, contribuyendo con soluciones que marquen la diferencia.
+            </p>
+        </div>
+        <div class="about__image">
+            <img src="{{ url_for('static', filename='img/logo/logo.svg') }}" alt="About CorEngineer">
+        </div>
+    </div>
+</section>
+{% endblock %}
