@@ -7,7 +7,8 @@
     min-width: 350px;
     height: auto;
     margin: auto;
-    margin-block: var(--margin-mid);
+    margin-block: var(--margin-super);
+    box-shadow: 4px 4px 10px var(--card-bg-color2);
     
 }
 
@@ -17,8 +18,7 @@
     align-items: center;
     gap: 16px;
     width: 100%;
-    height: 800px;
-    border: 1px solid var(--secondary-title);
+    height: 800px;  
     border-radius: 8px;
     background-color: var(--card-bg-color);
     position: relative;

@@ -1,5 +1,49 @@
 <footer class="footer">
     <div class="footer__container">
-        <p>&copy; 2024 CORENGINEER. Todos los derechos reservados.</p>
+        <!-- Información de Contacto -->
+        <div class="footer__contact">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle 123, Ciudad, País</p>
+            <p>Email: <a href="mailto:contacto@corengineer.com">contacto@corengineer.com</a></p>
+            <p>Teléfono: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+
+        <!-- Enlaces de Navegación -->
+        <div class="footer__nav">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="{{ url_for('main.home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('main.about') }}">About Us</a></li>
+                <li><a href="{{ url_for('main.services') }}">Servicios</a></li>
+                <li><a href="{{ url_for('main.portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ url_for('main.contact') }}">Contacto</a></li>
+                <li><a href="{{ url_for('main.home') }}">Política de Privacidad</a></li>
+                <li><a href="{{ url_for('main.home') }}">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer__social">
+            <h3>Síguenos</h3>
+            <a class="footer__social-link"  href="https://facebook.com" target="_blank">Facebook</a>
+            <a class="footer__social-link"  href="https://twitter.com" target="_blank">Twitter</a>
+            <a class="footer__social-link"  href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a class="footer__social-link"  href="https://github.com" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Suscripción al Newsletter -->
+        <div class="footer__newsletter">
+            <h3>Suscríbete a nuestro Newsletter</h3>
+            <form action="#" method="post">
+                <input class="footer__newslatter-input" type="email" name="email" placeholder="Tu correo electrónico">
+                <button class="footer__newslatter-button"  type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Información Legal -->
+    <div class="footer__legal">
+        <p>© 2024 CorEngineer. Todos los derechos reservados.</p>
+        <p><a href="#privacy">Política de Privacidad</a> | <a href="#terms">Términos y Condiciones</a></p>
     </div>
 </footer>
