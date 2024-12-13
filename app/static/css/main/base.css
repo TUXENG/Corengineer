@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #212529;
+    --bg-color-opacity: #21252922;
+    --card-bg-color: #252b31; 
+    --primary-color: #9fef00bf;
+    --secondary-color: #9fef00;
+    --accent-color: #f00000;
+    --primary-text: #e0e0e0;
+    --secondary-text: #757575;
+    --primary-title: #fff;
+    --secondary-title: #a4b1cd;
+    --divider-color: #22272c;
+    --divider-color-opacity: #282e3555;
+
+
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-nunito: 'Nunito', sans-serif;
+    --font-family-montserrat: 'Montserrat', sans-serif;
+
+    --font-size-xsmall: .5em;
+    --font-size-small: 1em;
+    --font-size-mid: 1.5em;
+    --font-size-big: 2em;
+    --font-size-xbig: 2.5em;
+    --font-size-super: 3.0em;
+    --font-size-xsuper: 3.5em;
+
+    --margin-xsmall: 3px;
+    --margin-small: 5px;
+    --margin-mid: 8px;
+    --margin-big: 13px;
+    --margin-xbig: 21px;
+    --margin-super: 34px;
+    --margin-xsuper: 55px;
+
+    --padding-xsmall: 2px;
+    --padding-small: 3px;
+    --padding-mid: 5px;
+    --padding-big: 7px;
+    --padding-xbig: 11px;
+    --padding-super: 13px;
+    --padding-xsuper: 17px;
+
+
+    --one-level: -1; 
+    --two-level: 1;
+    --three-level: 10;
+    --four-level: 100;
+    --five-level: 1000;
+    --six-level: 10000;
+    --seven-level: 100000;
+    --eight-level: 1000000;
+    --nine-level: 10000000;
+    --ten-level: 100000000;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: scroll-behavior .5s cubic-bezier(.03, .7, .88, .28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-text);
+    font-size: var(--font-size-small);
+    font-family: var(--font-family-montserrat);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+}

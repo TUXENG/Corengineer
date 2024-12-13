@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block title %} Inicio - CorEngineer {% endblock %}
+{% block contentBlock %}
+
+<section class="index">
+  <div class="index__container">
+    <div class="welcome">
+      {% for wel in welcome %}
+      <div class="welcome__content">
+        <div class="welcome__bg">
+          <div class="welcome__bg-container">
+            <img 
+            src="{{url_for('static', filename=wel.image_bg)}}" 
+            alt="{{wel.alt_bg}}" 
+            class="welcome_bg-img">
+          </div>
+        </div>
+        <div class="welcome__img-container">
+          <img 
+            src="{{url_for('static', filename=wel.image_logo)}}" 
+            alt="{{wel.alt_logo}}" 
+            class="welcome__img">
+        </div>
+        
+        <h1 class="welcome__corengineer">CORENGINEER</h1>
+        <h2 class="welcome__slogan welcome__slogan-typing">THE CORE OF <spam class="welcome__slogan-spam-typing"></spam></h3>
+        <p class="welcome__description ">{{wel.description}}
+        </p>
+        <a href="#info" class="welcome__button" role="button">
+          <i class="welcome__button-ico fa-solid fa-arrow-down-long"></i>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <h3 class="title-section">INFORMACIÓN</h3>
+    <div class="info__cards" id="info">
+      <div class="info__grid">
+        {% for info in infos %}
+          {% include 'cards/info_card.html' %}
+        {% endfor %}
+      </div>
+      <div class="course__cards">
+        <div class="course__grid">
+          {% for course in courses %}
+            {% include 'cards/course_card.html' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

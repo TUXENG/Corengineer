@@ -1,0 +1,32 @@
+{
+    "info": [
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "info image",
+            "title": "Information",
+            "description":"CorEngineer ofrece soluciones tecnológicas a la medida de tus necesidades. Te acompañamos en cada etapa de tus proyectos para asegurar un producto final que cumpla con tus expectativas. Contamos con amplia experiencia en electrónica, programación, robótica, y en la planificación y ejecución de proyectos tecnológicos.",
+            "url": "#"
+        },
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "info image",
+            "title": "Information",
+            "description":"CorEngineer ofrece soluciones tecnológicas a la medida de tus necesidades. Te acompañamos en cada etapa de tus proyectos para asegurar un producto final que cumpla con tus expectativas. Contamos con amplia experiencia en electrónica, programación, robótica, y en la planificación y ejecución de proyectos tecnológicos.",
+            "url": "#"
+         },
+         {
+            "image": "img/logo/logo.svg",
+            "alt": "info image",
+            "title": "Information",
+            "description":"CorEngineer ofrece soluciones tecnológicas a la medida de tus necesidades. Te acompañamos en cada etapa de tus proyectos para asegurar un producto final que cumpla con tus expectativas. Contamos con amplia experiencia en electrónica, programación, robótica, y en la planificación y ejecución de proyectos tecnológicos.",
+            "url": "#"
+        },
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "info image",
+            "title": "Information",
+            "description":"CorEngineer ofrece soluciones tecnológicas a la medida de tus necesidades. Te acompañamos en cada etapa de tus proyectos para asegurar un producto final que cumpla con tus expectativas. Contamos con amplia experiencia en electrónica, programación, robótica, y en la planificación y ejecución de proyectos tecnológicos.",
+            "url": "#"
+         }
+    ]
+}

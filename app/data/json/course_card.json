@@ -1,0 +1,36 @@
+{
+    "courses": [
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "VS Code",
+            "title": "Curso de Visual Studio Code",
+            "description": "Aprende a utilizar Visual Studio Code, uno de los editores de código más populares y versátiles.",
+            "state": "Disponible",
+            "cost": "Gratuito"            
+        },
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "Python Básico",
+            "title": "Curso de Python Básico",
+            "description": "Un curso introductorio para aprender los fundamentos del lenguaje de programación Python.",
+            "state": "Disponible",
+            "cost": "Gratuito"
+        },
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "HTML y CSS Básico",
+            "title": "Curso de HTML y CSS Básico",
+            "description": "Aprende a crear páginas web con HTML y CSS, los pilares del desarrollo web frontend.",
+            "state": "Disponible",
+            "cost": "Gratuito"
+        },
+        {
+            "image": "img/logo/logo.svg",
+            "alt": "Flask Básico",
+            "title": "Curso de Flask Básico",
+            "description": "Un curso para iniciarte en el desarrollo web con Flask, un microframework para Python.",
+            "state": "Disponible",
+            "cost": "Gratuito"
+        }
+    ]
+}
